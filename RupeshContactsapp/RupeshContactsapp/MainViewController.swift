@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MainViewController.swift
 //  RupeshContactsApp
 //
 //  Created by rupesh-6878 on 06/05/20.
@@ -8,10 +8,11 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class MainViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = .red
         // Do any additional setup after loading the view.
     }
 
