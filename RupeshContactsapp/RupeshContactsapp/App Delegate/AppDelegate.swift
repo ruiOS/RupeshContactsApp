@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  RupeshContactsApp
 //
-//  Created by rupesh-6878 on 06/05/20.
-//  Copyright © 2020 rupesh-6878. All rights reserved.
+//  Created by rupesh on 06/05/20.
+//  Copyright © 2020 rupesh. All rights reserved.
 //
 
 import UIKit
@@ -12,17 +12,17 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
 
         if #available(iOS 13, *){
-
+            //For devices above iOS 13 app launch is handled by SceneDelegate
         }else{
+            //Set MainViewController as window's rootViewController
             window = UIWindow(frame: UIScreen.main.bounds)
-            let mainVc = MainViewController()
-            window?.rootViewController = UINavigationController(rootViewController: mainVc)
+            let mainVc = MainTabViewController()
+            window?.rootViewController = mainVc
             window?.makeKeyAndVisible()
         }
         return true
@@ -30,6 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+//Extension available only for IOs 13+ devices to support multiple windows in future
 @available(iOS 13, *)
 extension AppDelegate{
     // MARK: UISceneSession Lifecycle

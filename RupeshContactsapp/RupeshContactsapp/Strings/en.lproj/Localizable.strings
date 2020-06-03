@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  RupeshContactsApp
+
+  Created by rupesh on 03/06/20.
+  Copyright © 2020 rupesh. All rights reserved.
+*/
+
+//common
+"rca.ios.common.rupeshContactsApp" = "Rupesh Contacts App";
+"rca.ios.common.contacts" = "Contacts";
+"rca.ios.common.settings" = "Settings";
