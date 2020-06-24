@@ -10,6 +10,10 @@
 		77578ACD2487CEBB006D2A7E /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77578ACC2487CEBB006D2A7E /* SettingsController.swift */; };
 		77578AE02487D70B006D2A7E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 77578AE22487D70B006D2A7E /* Localizable.strings */; };
 		77578AE62487D73E006D2A7E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 77578AE82487D73E006D2A7E /* InfoPlist.strings */; };
+		77578AEE2488C74C006D2A7E /* ContactListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77578AED2488C74C006D2A7E /* ContactListTableViewCell.swift */; };
+		77578AF12488CD1B006D2A7E /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 77578AEF2488CD1B006D2A7E /* Model.xcdatamodeld */; };
+		77578AF62488CF55006D2A7E /* AddContactVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77578AF52488CF55006D2A7E /* AddContactVC.swift */; };
+		77578AF82488D17A006D2A7E /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77578AF72488D17A006D2A7E /* CoreDataManager.swift */; };
 		77B37D7A2487C689009DFB32 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B37D792487C689009DFB32 /* AppDelegate.swift */; };
 		77B37D7B2487C689009DFB32 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B37D782487C689009DFB32 /* SceneDelegate.swift */; };
 		77B37D802487C6CE009DFB32 /* UserDefaultsPropertyWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B37D7F2487C6CE009DFB32 /* UserDefaultsPropertyWrapper.swift */; };
@@ -27,6 +31,10 @@
 		77578AE72487D73E006D2A7E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		77578AEB2487D7A5006D2A7E /* te */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = te; path = te.lproj/Localizable.strings; sourceTree = "<group>"; };
 		77578AEC2487D7A5006D2A7E /* te */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = te; path = te.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		77578AED2488C74C006D2A7E /* ContactListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListTableViewCell.swift; sourceTree = "<group>"; };
+		77578AF02488CD1B006D2A7E /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		77578AF52488CF55006D2A7E /* AddContactVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactVC.swift; sourceTree = "<group>"; };
+		77578AF72488D17A006D2A7E /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		77B37D782487C689009DFB32 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		77B37D792487C689009DFB32 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		77B37D7D2487C6CD009DFB32 /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
@@ -62,7 +70,8 @@
 		77578ACF2487D0AC006D2A7E /* Contacts */ = {
 			isa = PBXGroup;
 			children = (
-				77B37D882487C751009DFB32 /* ContactListController.swift */,
+				77578AF32488CEFD006D2A7E /* ContactList */,
+				77578AF42488CF27006D2A7E /* AddContact */,
 			);
 			path = Contacts;
 			sourceTree = "<group>";
@@ -74,6 +83,32 @@
 				77578AE82487D73E006D2A7E /* InfoPlist.strings */,
 			);
 			path = Strings;
+			sourceTree = "<group>";
+		};
+		77578AF22488CD22006D2A7E /* CoreDataModel */ = {
+			isa = PBXGroup;
+			children = (
+				77578AEF2488CD1B006D2A7E /* Model.xcdatamodeld */,
+			);
+			name = CoreDataModel;
+			path = "App Delegate/CoreDataModel";
+			sourceTree = "<group>";
+		};
+		77578AF32488CEFD006D2A7E /* ContactList */ = {
+			isa = PBXGroup;
+			children = (
+				77B37D882487C751009DFB32 /* ContactListController.swift */,
+				77578AED2488C74C006D2A7E /* ContactListTableViewCell.swift */,
+			);
+			path = ContactList;
+			sourceTree = "<group>";
+		};
+		77578AF42488CF27006D2A7E /* AddContact */ = {
+			isa = PBXGroup;
+			children = (
+				77578AF52488CF55006D2A7E /* AddContactVC.swift */,
+			);
+			path = AddContact;
 			sourceTree = "<group>";
 		};
 		77B37D7C2487C6B0009DFB32 /* App Delegate */ = {
@@ -91,6 +126,7 @@
 				77B37D7D2487C6CD009DFB32 /* AppColors.swift */,
 				77B37D7E2487C6CE009DFB32 /* AppSettingsManager.swift */,
 				77B37D7F2487C6CE009DFB32 /* UserDefaultsPropertyWrapper.swift */,
+				77578AF72488D17A006D2A7E /* CoreDataManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -127,6 +163,7 @@
 				77B37D7C2487C6B0009DFB32 /* App Delegate */,
 				77B37D8A2487C757009DFB32 /* View Controllers */,
 				77B37D832487C6E7009DFB32 /* Managers */,
+				77578AF22488CD22006D2A7E /* CoreDataModel */,
 				77578AD72487D520006D2A7E /* Strings */,
 				77EF0BB22462F3E400303EBF /* Assets.xcassets */,
 				77EF0BB42462F3E400303EBF /* LaunchScreen.storyboard */,
@@ -211,13 +248,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				77578ACD2487CEBB006D2A7E /* SettingsController.swift in Sources */,
+				77578AEE2488C74C006D2A7E /* ContactListTableViewCell.swift in Sources */,
 				77B37D872487C713009DFB32 /* MainTabViewController.swift in Sources */,
 				77B37D892487C751009DFB32 /* ContactListController.swift in Sources */,
 				77B37D822487C6CE009DFB32 /* AppSettingsManager.swift in Sources */,
 				77B37D7A2487C689009DFB32 /* AppDelegate.swift in Sources */,
+				77578AF82488D17A006D2A7E /* CoreDataManager.swift in Sources */,
 				77B37D812487C6CE009DFB32 /* AppColors.swift in Sources */,
+				77578AF12488CD1B006D2A7E /* Model.xcdatamodeld in Sources */,
 				77B37D7B2487C689009DFB32 /* SceneDelegate.swift in Sources */,
 				77B37D802487C6CE009DFB32 /* UserDefaultsPropertyWrapper.swift in Sources */,
+				77578AF62488CF55006D2A7E /* AddContactVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +328,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = "$(buildNumber)";
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -305,12 +347,15 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MARKETING_VERSION = "$(VersionNumber)";
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VersionNumber = 0.1;
+				buildNumber = 0100;
 			};
 			name = Debug;
 		};
@@ -348,6 +393,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = "$(buildNumber)";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -360,12 +406,15 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MARKETING_VERSION = "$(VersionNumber)";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
+				VersionNumber = 0.1;
+				buildNumber = 0100;
 			};
 			name = Release;
 		};
@@ -425,6 +474,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		77578AEF2488CD1B006D2A7E /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				77578AF02488CD1B006D2A7E /* Model.xcdatamodel */,
+			);
+			currentVersion = 77578AF02488CD1B006D2A7E /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 77EF0B9E2462F3E200303EBF /* Project object */;
 }
