@@ -11,10 +11,19 @@ import UIKit
 /// ViewController that shows the list of contacts
 class ContactListController: UIViewController,UITableViewDataSource {
 
+    let model = ContactListViewModel()
+
     //MARK:- View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        self.title = AppStrings.common_rupeshContactsApp
+
         setTableview()
+
+        let repository = ContactDataRepository()
+
+        model.contacts.value = repository.getAll()
     }
 
     //MARK:- SetTableView
@@ -28,6 +37,8 @@ class ContactListController: UIViewController,UITableViewDataSource {
 
     private func setTableview(){
         contactListTableview.dataSource = self
+
+        contactListTableview.register(ContactListTableViewCell.self, forCellReuseIdentifier: ContactListTableViewCell.reuiseIdentifier)
         
         self.view.addSubview(contactListTableview)
         contactListTableview.topAnchor.constraint(equalTo: self.view.topAnchor).isActive = true
@@ -38,12 +49,13 @@ class ContactListController: UIViewController,UITableViewDataSource {
     }
 
     //MARK:- TableViewData Source
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
-    }
-    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int { model.contacts.value.count }
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = ContactListTableViewCell(style: .subtitle, reuseIdentifier: "Cell")
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: ContactListTableViewCell.reuiseIdentifier, for: indexPath) as? ContactListTableViewCell else {
+            return UITableViewCell()
+        }
+        cell.setCell(withDataModel: model.contacts.value[indexPath.row])
         return cell
     }
 
