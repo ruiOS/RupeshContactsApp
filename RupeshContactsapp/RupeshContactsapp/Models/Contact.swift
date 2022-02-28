@@ -2,13 +2,13 @@
 //  Contact.swift
 //  RupeshContactsApp
 //
-//  Created by rupesh-6878 on 28/02/22.
-//  Copyright © 2022 rupesh-6878. All rights reserved.
+//  Created by rupesh on 28/02/22.
+//  Copyright © 2022 rupesh. All rights reserved.
 //
 
 import Foundation
 
-struct Contact{
+struct Contact: Equatable{
 
     public var contactNumber: String?
     public var contactPic: Data?
@@ -16,5 +16,9 @@ struct Contact{
     public var lastName: String?
     public var middleName: String?
     public var id: UUID
+
+    static func == (lhs: Self, rhs: Self) -> Bool{
+        lhs.id == rhs.id
+    }
 
 }

@@ -2,14 +2,13 @@
 //  CDContact+CoreDataProperties.swift
 //  RupeshContactsApp
 //
-//  Created by rupesh-6878 on 28/02/22.
-//  Copyright © 2022 rupesh-6878. All rights reserved.
+//  Created by rupesh on 28/02/22.
+//  Copyright © 2022 rupesh. All rights reserved.
 //
 //
 
 import Foundation
 import CoreData
-
 
 extension CDContact: NSManagedObjectEntityProtocol {
 
@@ -32,5 +31,15 @@ extension CDContact: NSManagedObjectEntityProtocol {
         Contact(contactNumber: self.contactNumber, contactPic: self.contactPic, firstName: self.firstName, lastName: self.lastName, middleName: self.middleName, id: self.id)
     }
 
-    
+    func bind(contact: Contact){
+        self.contactNumber = contact.contactNumber
+        self.contactPic = contact.contactPic
+        self.firstName = contact.firstName
+        self.id = contact.id
+        self.lastName = contact.lastName
+        self.middleName = contact.middleName
+
+        PersistentStorage.shared.saveContext()
+    }
+
 }

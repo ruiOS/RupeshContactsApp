@@ -19,7 +19,7 @@ class MainTabViewController: UITabBarController {
     ///Method to add items to MainTabViewController
     private func addTabItems(){
         self.tabBar.isTranslucent = false
-        self.tabBar.barTintColor = .blue
+        //self.tabBar.barTintColor = .blue
         self.tabBar.tintColor = .red
         self.tabBar.unselectedItemTintColor = .gray
 

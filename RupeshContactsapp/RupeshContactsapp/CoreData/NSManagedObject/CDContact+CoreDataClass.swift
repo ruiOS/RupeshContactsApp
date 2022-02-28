@@ -2,8 +2,8 @@
 //  CDContact+CoreDataClass.swift
 //  RupeshContactsApp
 //
-//  Created by rupesh-6878 on 28/02/22.
-//  Copyright © 2022 rupesh-6878. All rights reserved.
+//  Created by rupesh on 28/02/22.
+//  Copyright © 2022 rupesh. All rights reserved.
 //
 //
 

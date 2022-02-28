@@ -13,11 +13,12 @@ class ContactListTableViewCell: UITableViewCell {
 
     static let reuiseIdentifier = "ContactListTableViewCell"
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-        self.imageView?.contentMode = .scaleToFill
-
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: .subtitle, reuseIdentifier: reuseIdentifier)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
 
     func setCell(withDataModel datamodel: Contact){
@@ -28,14 +29,20 @@ class ContactListTableViewCell: UITableViewCell {
     }
 
     private func getName(fromContact contact: Contact) -> String{
-        appendStringWithSpacesBetween(appendStringWithSpacesBetween(contact.firstName!, contact.middleName), contact.lastName)
+        appendStringWithSpacesBetween(appendStringWithSpacesBetween(contact.firstName, contact.middleName), contact.lastName)
     }
 
-    private func appendStringWithSpacesBetween(_ string1: String, _ string2: String?) -> String{
-        guard let string2 = string2, !string2.isEmpty else {
-            return string1
+    private func appendStringWithSpacesBetween(_ string1: String?, _ string2: String?) -> String{
+        if let string1 = string1, !string1.isEmpty {
+            if let string2 = string2, !string2.isEmpty{
+                return string1 + " " + string2
+            }else{
+                return string1
+            }
+        }else if let string2 = string2, !string2.isEmpty {
+            return string2
         }
-        return string1 + "" + string2
+        return ""
     }
 
     override func layoutSubviews() {

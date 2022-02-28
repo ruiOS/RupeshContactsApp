@@ -17,7 +17,7 @@ struct AppColors{
 //Set colors for different interface modes in iOS 13 and Above
 @available(iOS 13,*)
 extension AppColors{
-    
+
     ///method to change color for iOS 13 anad above for different interface modes. Call it during app launch to set colors for iOS13 and above
     static func setColorsForiOS13(){
         self.backGroundColor = .systemBackground

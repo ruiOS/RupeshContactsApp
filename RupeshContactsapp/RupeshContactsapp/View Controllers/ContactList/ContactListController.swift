@@ -18,6 +18,7 @@ class ContactListController: UIViewController,UITableViewDataSource {
         super.viewDidLoad()
 
         self.title = AppStrings.common_rupeshContactsApp
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(pushAddContactForm))
 
         setTableview()
 
@@ -26,12 +27,19 @@ class ContactListController: UIViewController,UITableViewDataSource {
         model.contacts.value = repository.getAll()
     }
 
+    @objc func pushAddContactForm(){
+        let addContactVC = AddContactVC()
+        addContactVC.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(addContactVC, animated: true)
+    }
+
     //MARK:- SetTableView
     ///UITableView to display contacts
     let contactListTableview: UITableView = {
         let tempTableView = UITableView()
         tempTableView.translatesAutoresizingMaskIntoConstraints = false
         tempTableView.tableFooterView = UIView()
+        tempTableView.separatorStyle = .singleLine
         return tempTableView
     }()
 

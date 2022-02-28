@@ -19,6 +19,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
 
         //create a scene
+        AppColors.setColorsForiOS13()
+
         guard let windowScene = (scene as? UIWindowScene) else { return }
         //Add window to scene
         window = UIWindow(windowScene: windowScene)

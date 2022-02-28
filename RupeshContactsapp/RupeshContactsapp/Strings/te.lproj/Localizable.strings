@@ -10,3 +10,10 @@
 "rca.ios.common.rupeshContactsApp" = "రూపేష్ కాంటాక్ట్స్ అప్లికేషన్";
 "rca.ios.common.contacts" = "కాంటాక్ట్స్";
 "rca.ios.common.settings" = "సెట్టింగులు";
+
+"rca.ios.common.firstName" = "First Name";
+"rca.ios.common.middleName" = "Middle Name";
+"rca.ios.common.lastName" = "Last Name";
+"rca.ios.common.contactNumber" = "Contact Number";
+"rca.ios.common.add" = "Add";
+"rca.ios.common.update" = "Update";
