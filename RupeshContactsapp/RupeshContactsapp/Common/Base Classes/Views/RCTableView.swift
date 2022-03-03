@@ -2,8 +2,8 @@
 //  RCTableView.swift
 //  RupeshContactsApp
 //
-//  Created by rupesh-6878 on 28/02/22.
-//  Copyright © 2022 rupesh-6878. All rights reserved.
+//  Created by rupesh on 28/02/22.
+//  Copyright © 2022 rupesh. All rights reserved.
 //
 
 import UIKit
@@ -38,10 +38,11 @@ class RCTableView: UITableView {
             self.dataSource = dataSource ? viewController as? UITableViewDataSource : nil
             self.delegate = delegate ? viewController as? UITableViewDelegate : nil
         }
+        view?.backgroundColor   =   AppColors.tableViewBackGroundColor
     }
  
     private func intialSetUp(){
-        self.backgroundColor    =   AppColors.backGroundColor
+        self.backgroundColor    =   AppColors.tableViewBackGroundColor
         self.translatesAutoresizingMaskIntoConstraints = false
         self.rowHeight          =   UITableView.automaticDimension
 

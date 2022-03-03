@@ -8,23 +8,26 @@
 
 import UIKit
 
+///MainTabViewController of the app
+///Contains all the tabs required for the app
 class MainTabViewController: UITabBarController {
-    
+
+    //MARK: - View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         //add tab Items
-        addTabItems()
+        setTabBar()
     }
 
-    ///Method to add items to MainTabViewController
-    private func addTabItems(){
+    ///Method to setTabBar
+    private func setTabBar(){
+
         self.tabBar.isTranslucent = false
-        //self.tabBar.barTintColor = .blue
-        self.tabBar.tintColor = .red
+        self.tabBar.tintColor = AppColors.tabBarTintColor
         self.tabBar.unselectedItemTintColor = .gray
 
         UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font : UIFont(name: "Helvetica Neue", size: 12)! , NSAttributedString.Key.foregroundColor: UIColor.gray], for: [.normal])
-        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font : UIFont(name: "Helvetica Neue", size: 12)!, NSAttributedString.Key.foregroundColor:UIColor.blue], for: [.selected])
+        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font : UIFont(name: "Helvetica Neue", size: 12)!, NSAttributedString.Key.foregroundColor:AppColors.tabBarTintColor], for: [.selected])
 
         let contactListController = ContactListController()
         let settingsController = SettingsController()

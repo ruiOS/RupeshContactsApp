@@ -29,7 +29,7 @@ enum InputDataType: CaseIterable, Equatable{
         case .contactNumber:
             return AppStrings.common_contactNumber
         case .contactPic(let isPicAvailable):
-            return isPicAvailable ? AppStrings.common_add : AppStrings.common_update
+            return isPicAvailable ?  AppStrings.common_update : AppStrings.common_add
         }
     }
 

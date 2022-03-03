@@ -17,3 +17,7 @@
 "rca.ios.common.contactNumber" = "Contact Number";
 "rca.ios.common.add" = "Add";
 "rca.ios.common.update" = "Update";
+"rca.ios.common.ok" = "OK";
+
+"rca.ios.common.add.enterValidPhoneNumber" = "Please enter invalid phone number";
+"rca.ios.common.add.newContact" = "New Contact";

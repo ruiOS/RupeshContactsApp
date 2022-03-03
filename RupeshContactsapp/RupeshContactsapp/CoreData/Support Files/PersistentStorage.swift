@@ -8,35 +8,45 @@
 
 import CoreData
 
+///class used to PersistentStorage
 final class PersistentStorage {
 
+    //MARK: - Singleton
+    ///object of PersistentStorage
     static let shared: PersistentStorage = PersistentStorage()
 
     private init(){}
 
+    // MARK: - Core Data stack
+    ///Container that encapsulates the Core Data stack in the app
     lazy var persistentContainer: NSPersistentContainer = {
-        let container = NSPersistentContainer(name: "Model")
-        container.loadPersistentStores { storageDescription, error in
-            if let nsError = error as NSError?{
-                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+        let container = NSPersistentContainer(name: "RupeshContactsApp")
+        container.loadPersistentStores(completionHandler: { (storeDescription, error) in
+            if let error = error as NSError? {
+                fatalError("Unresolved error \(error), \(error.userInfo)")
             }
-        }
+        })
         return container
     }()
 
+    ///The main queue’s managed object context.
     lazy var context = persistentContainer.viewContext
 
-    func saveContext(){
-        if context.hasChanges{
-            do{
+    // MARK: - Core Data Saving support
+    ///method used to save changes in context
+    func saveContext () {
+        if context.hasChanges {
+            do {
                 try context.save()
-            }catch{
-                let nsError = error as NSError
-                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+            } catch {
+                let nserror = error as NSError
+                fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
             }
         }
     }
-
+    
+    /// method return fetched data of entity
+    /// - Returns: fetched data entity type
     func fetchManagedObject<T: NSManagedObject>(managedObject: T.Type) -> [T]{
         do{
             if let result: [T] = try context.fetch(managedObject.fetchRequest()) as? [T] {
@@ -47,7 +57,11 @@ final class PersistentStorage {
         }
         return [T]()
     }
-
+    
+    /// method returns fetched data based on conditions
+    /// - Parameter predicate: predicate to fetch data
+    /// - Parameter sortDescriptors: sortDescriptors to sort data
+    /// - Returns: fetched data based on conditions
     func fetchObjects<T: NSFetchRequestResult & NSManagedObjectEntityProtocol>(
         usingPredicate predicate: NSPredicate? = nil,
         withSortDescriptors sortDescriptors: [NSSortDescriptor]? = nil) -> [T]?

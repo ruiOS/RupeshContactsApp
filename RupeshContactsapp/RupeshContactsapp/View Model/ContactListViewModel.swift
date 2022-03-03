@@ -8,8 +8,10 @@
 
 import Foundation
 
+///View model for contact list
 final class ContactListViewModel{
 
-    var contacts: Box<[Contact]> = Box([])
+    ///box binding of contacts
+    var contacts: Box<[ContactListCellViewModel]> = Box([])
 
 }

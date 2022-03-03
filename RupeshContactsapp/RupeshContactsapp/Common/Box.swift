@@ -8,6 +8,7 @@
 
 import Foundation
 
+///Boc binding
 final class Box<Object>{
 
     typealias Listener = (Object) -> Void

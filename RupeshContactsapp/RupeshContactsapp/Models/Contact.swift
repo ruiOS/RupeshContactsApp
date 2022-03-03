@@ -8,7 +8,8 @@
 
 import Foundation
 
-struct Contact: Equatable{
+///Data model to store cdContact
+struct Contact: ContactProtocol{
 
     public var contactNumber: String?
     public var contactPic: Data?
@@ -16,9 +17,5 @@ struct Contact: Equatable{
     public var lastName: String?
     public var middleName: String?
     public var id: UUID
-
-    static func == (lhs: Self, rhs: Self) -> Bool{
-        lhs.id == rhs.id
-    }
 
 }

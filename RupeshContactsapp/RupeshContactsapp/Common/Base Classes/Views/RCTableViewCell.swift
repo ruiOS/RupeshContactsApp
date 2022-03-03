@@ -2,8 +2,8 @@
 //  RCTableViewCell.swift
 //  RupeshContactsApp
 //
-//  Created by rupesh-6878 on 28/02/22.
-//  Copyright © 2022 rupesh-6878. All rights reserved.
+//  Created by rupesh on 28/02/22.
+//  Copyright © 2022 rupesh. All rights reserved.
 //
 
 import UIKit
@@ -13,7 +13,7 @@ class RCTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
 
-        self.backgroundColor = AppColors.backGroundColor
+        self.backgroundColor = AppColors.cellBackGroundColor
         self.imageView?.contentMode = .scaleToFill
     }
 

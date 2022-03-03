@@ -2,8 +2,8 @@
 //  RupeshContactsAppTests.swift
 //  RupeshContactsAppTests
 //
-//  Created by rupesh-6878 on 28/02/22.
-//  Copyright © 2022 rupesh-6878. All rights reserved.
+//  Created by rupesh on 28/02/22.
+//  Copyright © 2022 rupesh. All rights reserved.
 //
 
 import XCTest
@@ -30,6 +30,7 @@ class RupeshContactsAppTests: XCTestCase {
 
         let contactList = [contact1, contact2, contact3, contact4, contact5, contact6]
         testContact(withContact: contact1)
+
         testContact(withContact: contact2)
         testContact(withContact: contact3)
         testContact(withContact: contact4)
@@ -39,16 +40,40 @@ class RupeshContactsAppTests: XCTestCase {
         for i in 0..<contactList.count{
             for j in 0..<contactList.count{
                 if i == j { continue }
-                XCTAssertNotEqual(contactList[i], contactList[j])
+                XCTAssertNotEqual(contactList[i].id, contactList[j].id)
             }
         }
 
+    }
+
+    func testTypes(){
+        let viewModel = AddContactVCDataModel()
+        viewModel.dataFieldModel.value.dataFields = InputDataType.allCases.map({ AddContactVCCellDataModel(input: nil, inputDataType: $0)})
+
+        for i in 0..<viewModel.dataFieldModel.value.dataFields.count{
+            for j in 0..<viewModel.dataFieldModel.value.dataFields.count{
+                if i == j { continue }
+                XCTAssertNotEqual(i, j)
+            }
+        }
+
+        let contact = Contact(contactNumber: viewModel.dataFieldModel.value.contactNumber, contactPic: viewModel.dataFieldModel.value.contactPic, firstName: viewModel.dataFieldModel.value.firstName, lastName: viewModel.dataFieldModel.value.lastName, middleName: viewModel.dataFieldModel.value.middleName, id: UUID())
+        let manager = ContactManager()
+
+        manager.create(contact: contact)
     }
 
     func testContact(withContact contact: Contact){
         let cdContact = CDContact(context: PersistentStorage.shared.context)
         cdContact.bind(contact: contact)
         let _ = cdContact.convertToContact()
+        removeContactFromDB(contact: contact)
+    }
+
+    func removeContactFromDB(contact: Contact){
+        let manager = ContactManager()
+
+        manager.deleteContact(usingID: contact.id)
     }
 
 }

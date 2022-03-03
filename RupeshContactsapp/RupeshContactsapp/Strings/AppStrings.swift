@@ -36,5 +36,13 @@ struct AppStrings {
     @LocalisedString(key: "rca.ios.common.update", comment: "Update")
     static var common_update: String
 
+    @LocalisedString(key: "rca.ios.common.add.enterValidPhoneNumber", comment: "Please enter invalid phone number")
+    static var add_enterValidPhoneNumber: String
+
+    @LocalisedString(key: "rca.ios.common.ok", comment: "OK")
+    static var common_Ok: String
+
+    @LocalisedString(key: "rca.ios.common.add.newContact", comment: "New Contact")
+    static var add_newContact: String
 
 }
