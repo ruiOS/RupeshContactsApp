@@ -24,20 +24,25 @@ extension CDContact: NSManagedObjectEntityProtocol {
 
     ///contactNumber of contact
     @NSManaged public var contactNumber: String?
+
     ///firstName of contact
     @NSManaged public var firstName: String?
+
     ///contactPic of contact
     @NSManaged public var contactPic: Data?
+
     ///id of contact
-    @NSManaged public var id: UUID?
+    @NSManaged public var id: UUID
+
     ///lastName of contact
     @NSManaged public var lastName: String?
+
     ///middleName of contact
     @NSManaged public var middleName: String?
 
     ///method returns contact value of cdContact
     func convertToContact() -> Contact{
-        Contact(contactNumber: self.contactNumber, contactPic: self.contactPic, firstName: self.firstName, lastName: self.lastName, middleName: self.middleName, id: self.id!)
+        Contact(contactNumber: self.contactNumber, contactPic: self.contactPic, firstName: self.firstName, lastName: self.lastName, middleName: self.middleName, id: self.id)
     }
 
     /// method binds contact value to self
@@ -52,4 +57,5 @@ extension CDContact: NSManagedObjectEntityProtocol {
 
         PersistentStorage.shared.saveContext()
     }
+
 }

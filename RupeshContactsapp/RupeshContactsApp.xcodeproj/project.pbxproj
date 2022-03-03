@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		772F99D927D0006800482D26 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772F99D827D0006800482D26 /* String+Extensions.swift */; };
+		772F99EF27D12A3F00482D26 /* RupeshContactsApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 772F99ED27D12A3F00482D26 /* RupeshContactsApp.xcdatamodeld */; };
+		772F99F227D12AF400482D26 /* CDContact+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772F99F027D12AF400482D26 /* CDContact+CoreDataClass.swift */; };
+		772F99F327D12AF400482D26 /* CDContact+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772F99F127D12AF400482D26 /* CDContact+CoreDataProperties.swift */; };
 		77578ACD2487CEBB006D2A7E /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77578ACC2487CEBB006D2A7E /* SettingsController.swift */; };
 		77578AE02487D70B006D2A7E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 77578AE22487D70B006D2A7E /* Localizable.strings */; };
 		77578AE62487D73E006D2A7E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 77578AE82487D73E006D2A7E /* InfoPlist.strings */; };
@@ -39,9 +42,6 @@
 		77C8205427CEBFA000793443 /* RCTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C8205227CEBFA000793443 /* RCTableViewCell.swift */; };
 		77C8205527CEBFA000793443 /* RCTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C8205327CEBFA000793443 /* RCTableView.swift */; };
 		77C8205727CEBFC200793443 /* TableViewCellDataModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C8205627CEBFC200793443 /* TableViewCellDataModelProtocol.swift */; };
-		77C8205C27CEC93300793443 /* RupeshContactsApp.xcdatamodeld in Resources */ = {isa = PBXBuildFile; fileRef = 77578AEF2488CD1B006D2A7E /* RupeshContactsApp.xcdatamodeld */; };
-		77C8208927CFBE2A00793443 /* CDContact+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C8208727CFBE2A00793443 /* CDContact+CoreDataClass.swift */; };
-		77C8208A27CFBE2A00793443 /* CDContact+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C8208827CFBE2A00793443 /* CDContact+CoreDataProperties.swift */; };
 		77C8208E27CFE86F00793443 /* TextFieldEditingEventsDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C8208D27CFE86F00793443 /* TextFieldEditingEventsDelegate.swift */; };
 		77EF0BB32462F3E400303EBF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77EF0BB22462F3E400303EBF /* Assets.xcassets */; };
 		77EF0BB62462F3E400303EBF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77EF0BB42462F3E400303EBF /* LaunchScreen.storyboard */; };
@@ -59,11 +59,13 @@
 
 /* Begin PBXFileReference section */
 		772F99D827D0006800482D26 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "String+Extensions.swift"; path = "RupeshContactsApp/Common/Base Classes/Extensions/String+Extensions.swift"; sourceTree = SOURCE_ROOT; };
+		772F99EE27D12A3F00482D26 /* RupeshContactsApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RupeshContactsApp.xcdatamodel; sourceTree = "<group>"; };
+		772F99F027D12AF400482D26 /* CDContact+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDContact+CoreDataClass.swift"; sourceTree = "<group>"; };
+		772F99F127D12AF400482D26 /* CDContact+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDContact+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		77578ACC2487CEBB006D2A7E /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
 		77578AE32487D70E006D2A7E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		77578AE72487D73E006D2A7E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		77578AED2488C74C006D2A7E /* ContactListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListTableViewCell.swift; sourceTree = "<group>"; };
-		77578AF02488CD1B006D2A7E /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		77578AF52488CF55006D2A7E /* AddContactVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactVC.swift; sourceTree = "<group>"; };
 		778B886627CCC1F000CFEE1D /* ManagedObjectProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ManagedObjectProtocol.swift; path = "RupeshContactsapp/CoreData/Support Files/ManagedObjectProtocol.swift"; sourceTree = SOURCE_ROOT; };
 		778B886727CCC1F000CFEE1D /* PersistentStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PersistentStorage.swift; path = "RupeshContactsapp/CoreData/Support Files/PersistentStorage.swift"; sourceTree = SOURCE_ROOT; };
@@ -94,8 +96,6 @@
 		77C8205227CEBFA000793443 /* RCTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RCTableViewCell.swift; path = "RupeshContactsapp/Common/Base Classes/Views/RCTableViewCell.swift"; sourceTree = SOURCE_ROOT; };
 		77C8205327CEBFA000793443 /* RCTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RCTableView.swift; path = "RupeshContactsapp/Common/Base Classes/Views/RCTableView.swift"; sourceTree = SOURCE_ROOT; };
 		77C8205627CEBFC200793443 /* TableViewCellDataModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TableViewCellDataModelProtocol.swift; path = "RupeshContactsapp/View Model/Abstraction Protocols/TableViewCellDataModelProtocol.swift"; sourceTree = SOURCE_ROOT; };
-		77C8208727CFBE2A00793443 /* CDContact+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDContact+CoreDataClass.swift"; sourceTree = "<group>"; };
-		77C8208827CFBE2A00793443 /* CDContact+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDContact+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		77C8208D27CFE86F00793443 /* TextFieldEditingEventsDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TextFieldEditingEventsDelegate.swift; path = RupeshContactsApp/Common/Protocols/TextFieldEditingEventsDelegate.swift; sourceTree = SOURCE_ROOT; };
 		77EF0BA62462F3E200303EBF /* RupeshContactsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RupeshContactsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77EF0BB22462F3E400303EBF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -151,7 +151,7 @@
 		77578AF22488CD22006D2A7E /* CoreDataModel */ = {
 			isa = PBXGroup;
 			children = (
-				77578AEF2488CD1B006D2A7E /* RupeshContactsApp.xcdatamodeld */,
+				772F99ED27D12A3F00482D26 /* RupeshContactsApp.xcdatamodeld */,
 			);
 			path = CoreDataModel;
 			sourceTree = "<group>";
@@ -194,8 +194,8 @@
 		77AA3EEF27CBF07E000A3F1D /* NSManagedObject */ = {
 			isa = PBXGroup;
 			children = (
-				77C8208727CFBE2A00793443 /* CDContact+CoreDataClass.swift */,
-				77C8208827CFBE2A00793443 /* CDContact+CoreDataProperties.swift */,
+				772F99F027D12AF400482D26 /* CDContact+CoreDataClass.swift */,
+				772F99F127D12AF400482D26 /* CDContact+CoreDataProperties.swift */,
 			);
 			path = NSManagedObject;
 			sourceTree = "<group>";
@@ -474,7 +474,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				77C8205C27CEC93300793443 /* RupeshContactsApp.xcdatamodeld in Resources */,
 				77EF0BB62462F3E400303EBF /* LaunchScreen.storyboard in Resources */,
 				77578AE62487D73E006D2A7E /* InfoPlist.strings in Resources */,
 				77578AE02487D70B006D2A7E /* Localizable.strings in Resources */,
@@ -512,16 +511,17 @@
 				77B37D892487C751009DFB32 /* ContactListController.swift in Sources */,
 				77C8202627CCFD3A00793443 /* AddContactVCDataModel.swift in Sources */,
 				77B37D822487C6CE009DFB32 /* AppSettingsManager.swift in Sources */,
+				772F99F227D12AF400482D26 /* CDContact+CoreDataClass.swift in Sources */,
 				778B887227CCC47300CFEE1D /* LocalisedString.swift in Sources */,
 				77C8204C27CEBE9600793443 /* ContactListCellViewModel.swift in Sources */,
 				77C8204327CE509F00793443 /* ContactManager.swift in Sources */,
+				772F99EF27D12A3F00482D26 /* RupeshContactsApp.xcdatamodeld in Sources */,
 				77B37D7A2487C689009DFB32 /* AppDelegate.swift in Sources */,
 				77AA3EE827CBDCDF000A3F1D /* Box.swift in Sources */,
-				77C8208927CFBE2A00793443 /* CDContact+CoreDataClass.swift in Sources */,
+				772F99F327D12AF400482D26 /* CDContact+CoreDataProperties.swift in Sources */,
 				77C8202427CCEDF300793443 /* AddContactVCCell.swift in Sources */,
 				778B887027CCC3DE00CFEE1D /* AppStrings.swift in Sources */,
 				77C8205027CEBF6200793443 /* ContactProtocol.swift in Sources */,
-				77C8208A27CFBE2A00793443 /* CDContact+CoreDataProperties.swift in Sources */,
 				77C8201C27CCC67F00793443 /* ContactRepository.swift in Sources */,
 				77B37D812487C6CE009DFB32 /* AppColors.swift in Sources */,
 				778B886827CCC1F000CFEE1D /* ManagedObjectProtocol.swift in Sources */,
@@ -805,13 +805,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		77578AEF2488CD1B006D2A7E /* RupeshContactsApp.xcdatamodeld */ = {
+		772F99ED27D12A3F00482D26 /* RupeshContactsApp.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				77578AF02488CD1B006D2A7E /* Model.xcdatamodel */,
+				772F99EE27D12A3F00482D26 /* RupeshContactsApp.xcdatamodel */,
 			);
-			currentVersion = 77578AF02488CD1B006D2A7E /* Model.xcdatamodel */;
-			path = RupeshContactsApp.xcdatamodeld;
+			currentVersion = 772F99EE27D12A3F00482D26 /* RupeshContactsApp.xcdatamodel */;
+			name = RupeshContactsApp.xcdatamodeld;
+			path = ../../../RupeshContactsapp/CoreData/CoreDataModel/RupeshContactsApp.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

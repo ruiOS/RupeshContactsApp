@@ -141,10 +141,5 @@ class ContactListTableViewCell: UITableViewCell {
             contactNumberLabel.leadingAnchor.constraint(equalTo: self.contactNameLabel.leadingAnchor)
         ])
 
-        self.contentView.layoutIfNeeded()
-        let height = contactPicImageView.frame.height
-        contactPicImageView.layer.cornerRadius = height / 2
-        contactPicImageView.layer.masksToBounds = true
-
     }
 }

@@ -73,7 +73,7 @@ class RupeshContactsAppTests: XCTestCase {
     func removeContactFromDB(contact: Contact){
         let manager = ContactManager()
 
-        manager.deleteContact(usingID: contact.id)
+        let _ = manager.deleteContact(usingID: contact.id)
     }
 
 }
