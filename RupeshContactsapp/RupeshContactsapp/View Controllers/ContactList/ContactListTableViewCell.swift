@@ -42,9 +42,13 @@ class ContactListTableViewCell: UITableViewCell {
             }else{
                 contactNameLabelYAxisAnchor = contactNameLabel.centerYAnchor.constraint(equalTo: self.contentView.centerYAnchor)
             }
-            if let imgData = self.viewModel.imageData {
-                let image = UIImage(data: imgData)
-                self.contactPicImageView.image = image
+            DispatchQueue.global(qos: .background).async { [weak self] in
+                guard let weakSelf  = self,
+                      let imgData = weakSelf.viewModel.imageData,
+                      let cdImage = UIImage(data: imgData, scale: 0.1) else { return }
+                DispatchQueue.main.async { [weak self] in
+                    self?.contactPicImageView.image = cdImage
+                }
             }
             self.contentView.layoutIfNeeded()
             let height = self.contactPicImageView.frame.height
@@ -59,10 +63,10 @@ class ContactListTableViewCell: UITableViewCell {
     ///imageView that stores contact image
     private let contactPicImageView: UIImageView = {
         let tempImageView = UIImageView()
-        tempImageView.backgroundColor = .clear
         if #available(iOS 13.0, *) {
             tempImageView.image = UIImage(systemName: "person.badge.plus")
         }
+        tempImageView.backgroundColor = .clear
         tempImageView.translatesAutoresizingMaskIntoConstraints = false
         return tempImageView
     }()
@@ -102,11 +106,8 @@ class ContactListTableViewCell: UITableViewCell {
         super.prepareForReuse()
 
         if #available(iOS 13.0, *) {
-            contactPicImageView.image = UIImage(systemName: "person.badge.plus")
+            self.contactPicImageView.image = UIImage(systemName: "person.badge.plus")
         }
-
-        self.contactPicImageView.layer.cornerRadius = 0
-        self.contactPicImageView.layer.masksToBounds = true
 
         self.contactNameLabel.text = nil
         self.contactNumberLabel.text = nil

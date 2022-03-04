@@ -25,7 +25,7 @@ class ContactListController: UIViewController, UITableViewDataSource, UITableVie
     private let manager = ContactManager()
 
     /// GlobalQueue with utility qos
-    let utilityGlobalQueue = DispatchQueue.global(qos: .utility)
+    let globalBackGroundQueue = DispatchQueue.global(qos: .utility)
 
     //MARK: - Views
     ///tableView that display contacts
@@ -70,7 +70,7 @@ class ContactListController: UIViewController, UITableViewDataSource, UITableVie
 
     //MARK: - AddContactDelegate
     func contactDidAdd() {
-        utilityGlobalQueue.async { [weak self] in
+        globalBackGroundQueue.async { [weak self] in
             guard let weakSelf = self else {return}
             weakSelf.model.contacts.value = weakSelf.manager.getAllContacts().map({ContactListCellViewModel(usingContact: $0)})
         }
@@ -87,12 +87,11 @@ class ContactListController: UIViewController, UITableViewDataSource, UITableVie
     
     /// set model and method calls for the model
     func setViewModel(){
-        utilityGlobalQueue.async { [weak self] in
+        globalBackGroundQueue.async { [weak self] in
             guard let weakSelf = self else { return }
 
             //set Contacts
             weakSelf.model.contacts.value = weakSelf.manager.getAllContacts().map({ContactListCellViewModel(usingContact: $0)})
-
             //set binding
             weakSelf.model.contacts.bindAndFire(listener: { [weak self] contacts in
                 DispatchQueue.main.async { [weak self] in

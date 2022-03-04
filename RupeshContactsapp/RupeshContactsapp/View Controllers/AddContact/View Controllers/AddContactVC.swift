@@ -208,7 +208,7 @@ extension AddContactVC: UINavigationControllerDelegate, UIImagePickerControllerD
                 if addContactVCCellData.inputDataType.isContactPic
                 {
                     addContactVCCellData.inputDataType = .contactPic(true)
-                    addContactVCCellData.input = userPickedImage.pngData()
+                    addContactVCCellData.input = userPickedImage.jpegData(compressionQuality: 0.1)
                 }
                 return addContactVCCellData
             }
