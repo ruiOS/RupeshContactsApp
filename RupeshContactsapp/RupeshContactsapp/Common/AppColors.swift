@@ -30,6 +30,9 @@ struct AppColors{
 
     ///default tabBarTintColor
     static var tabBarTintColor = UIColor(red:0.14, green:0.52, blue:0.97, alpha:1.00)
+
+    static var deleteButtonColor = UIColor.systemRed
+
 }
 
 //Set colors for different interface modes in iOS 13 and Above

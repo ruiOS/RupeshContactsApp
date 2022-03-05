@@ -21,3 +21,13 @@
 
 "rca.ios.common.add.enterValidPhoneNumber" = "Please enter invalid phone number";
 "rca.ios.common.add.newContact" = "New Contact";
+
+"rca.ios.common.done" = "Done";
+"rca.ios.common.edit" = "Edit";
+"rca.ios.common.cancel" = "Cancel";
+"rca.ios.common.close" = "Close";
+"rca.ios.common.back" = "Back";
+"rca.ios.common.delete" = "Delete";
+
+"rca.ios.edit.deleteRecordWarning" = "Are you sure you want to delete the Record?";
+"rca.ios.edit.recordNotFound" = "Record not found";

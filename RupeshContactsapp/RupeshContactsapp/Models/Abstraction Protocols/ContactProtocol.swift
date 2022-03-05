@@ -9,13 +9,14 @@
 import Foundation
 
 ///Protocol for contact data models
-protocol ContactProtocol{
+protocol ContactProtocol: RecordProtocol{
 
     var contactNumber: String? {get set}
     var contactPic: Data? {get set}
     var firstName: String? {get set}
     var lastName: String? {get set}
     var middleName: String? {get set}
-    var id: UUID {get set}
+
+    func getName() -> String
 
 }

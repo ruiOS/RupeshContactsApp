@@ -1,10 +1,9 @@
 //
-//  CDContact+CoreDataProperties.swift
+//  CDContact+Extensions.swift
 //  RupeshContactsApp
 //
-//  Created by rupesh on 28/02/22.
+//  Created by rupesh on 05/03/22.
 //  Copyright © 2022 rupesh. All rights reserved.
-//
 //
 
 import Foundation
@@ -19,26 +18,8 @@ extension CDContact: NSManagedObjectEntityProtocol {
 
     ///NSFetchRequest method used to fetch contacts
     @nonobjc public class func fetchRequest() -> NSFetchRequest<CDContact> {
-        return NSFetchRequest<CDContact>(entityName: "CDContact")
+        return NSFetchRequest<CDContact>(entityName: entityName)
     }
-
-    ///contactNumber of contact
-    @NSManaged public var contactNumber: String?
-
-    ///firstName of contact
-    @NSManaged public var firstName: String?
-
-    ///contactPic of contact
-    @NSManaged public var contactPic: Data?
-
-    ///id of contact
-    @NSManaged public var id: UUID
-
-    ///lastName of contact
-    @NSManaged public var lastName: String?
-
-    ///middleName of contact
-    @NSManaged public var middleName: String?
 
     ///method returns contact value of cdContact
     func convertToContact() -> Contact{

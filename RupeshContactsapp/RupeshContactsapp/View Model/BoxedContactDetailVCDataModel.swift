@@ -1,5 +1,5 @@
 //
-//  AddContactVCDataModel.swift
+//  BoxedContactDetailVCDataModel.swift
 //  RupeshContactsApp
 //
 //  Created by rupesh on 28/02/22.
@@ -14,11 +14,28 @@ enum AddContactRecordError: Error{
     case inputDataInvalid(String)
 }
 
-///DataModel for addcontactvc
-class AddContactVCDataModel{
+///DataModel for ContactDetailVC
+class BoxedContactDetailVCDataModel{
 
     ///box binding of records
-    var dataFieldModel: Box<AddContactVCDataFieldModel> = Box(AddContactVCDataFieldModel())
+    var dataFieldModel: Box<ContactDetailVCDataFieldModel> = Box(ContactDetailVCDataFieldModel())
+
+    var title: String?
+
+    var id: UUID?
+
+    var isInputEnabled: Bool = false{
+        didSet{
+            dataFieldModel.value.dataFields = dataFieldModel.value.dataFields.map({
+                var contactCellViewModel = $0
+                contactCellViewModel.isInputEnabled = isInputEnabled
+                return contactCellViewModel
+            })
+            inputModeChangedClosure?()
+        }
+    }
+
+    lazy var inputModeChangedClosure: (()->Void)? = nil
 
     ///called when data save fails
     var errorHandler: ((AddContactRecordError) -> Void)?
@@ -28,11 +45,15 @@ class AddContactVCDataModel{
 
     ///method used to create contact
     func createContactObject(){
-
         ///method creates contact
         func createContact(){
-            let aContact = Contact(contactNumber: dataFieldModel.value.contactNumber, contactPic: dataFieldModel.value.contactPic, firstName: dataFieldModel.value.firstName, lastName: dataFieldModel.value.lastName, middleName: dataFieldModel.value.middleName, id: UUID())
+            let aContact = Contact(contactNumber: dataFieldModel.value.contactNumber, contactPic: dataFieldModel.value.contactPic, firstName: dataFieldModel.value.firstName, lastName: dataFieldModel.value.lastName, middleName: dataFieldModel.value.middleName, id: getContactID())
             successHandler?(aContact)
+        }
+
+        func getContactID() -> UUID{
+            guard let id = id else {return UUID()}
+            return id
         }
 
         if let contactNumber = dataFieldModel.value.contactNumber{
@@ -45,13 +66,17 @@ class AddContactVCDataModel{
             createContact()
         }
     }
+
 }
 
-///DataFieldModel for addcontactvc
-struct AddContactVCDataFieldModel{
+///DataFieldModel for ContactDetailVC
+struct ContactDetailVCDataFieldModel{
 
     ///dataField models of addContact vc in a  array
-    var dataFields: [AddContactVCCellDataModelProtocol] = [AddContactVCCellDataModelProtocol]()
+    var dataFields: [ContactDetailVCCellDataModelProtocol] = [ContactDetailVCCellDataModelProtocol]()
+
+    ///dataField models of addContact vc in a  array
+    lazy var originalDataFields: [ContactDetailVCCellDataModelProtocol] = [ContactDetailVCCellDataModelProtocol]()
 
     ///returns contactNumber if exists
     var contactNumber: String? {

@@ -8,28 +8,29 @@
 
 import Foundation
 
-struct ContactManager{
+///Manager to manage contacts
+struct ContactManager: BaseManager{
 
-    private let contactDataRepository: ContactRepositoryProtocol = ContactDataRepository()
+    private let contactRepository: ContactRepository = ContactRepository()
 
-    func create(contact: Contact){
-        contactDataRepository.create(contact: contact)
+    func create(record: Contact){
+        contactRepository.create(record: record)
     }
 
-    func getContact(byUUID uuid: UUID) -> Contact?{
-        contactDataRepository.get(byIdentifier: uuid)
+    func getRecord(usingID id: UUID) -> Contact?{
+        contactRepository.get(byIdentifier: id)
     }
 
-    func getAllContacts() -> [Contact]{
-        contactDataRepository.getAll()
+    func getAllRecords() -> [Contact]{
+        contactRepository.getAll()
     }
 
-    func update(contact: Contact) -> Bool{
-        contactDataRepository.update(contact: contact)
+    func update(record: Contact) -> Bool{
+        contactRepository.update(record: record)
     }
 
-    func deleteContact(usingID id: UUID) -> Bool{
-        contactDataRepository.delete(usingID: id)
+    func deleteRecord(usingID id: UUID) -> Bool{
+        contactRepository.delete(usingID: id)
     }
 
 }

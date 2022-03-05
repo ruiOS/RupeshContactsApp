@@ -8,14 +8,8 @@
 
 import UIKit
 
-/// delegate to add contact
-protocol AddContactDelegate{
-    /// call this method after contact is added
-    func contactDidAdd()
-}
-
 /// ViewController that shows the list of contacts
-class ContactListController: UIViewController, UITableViewDataSource, UITableViewDelegate, AddContactDelegate{
+class ContactListController: UIViewController, UITableViewDataSource, UITableViewDelegate, RecordChangesDelegate{
 
     //MARK: - Data
     ///viewModel for the view
@@ -60,6 +54,11 @@ class ContactListController: UIViewController, UITableViewDataSource, UITableVie
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        let cellViewModel = model.contacts.value[indexPath.row]
+        let contact = manager.getRecord(usingID: cellViewModel.id)
+        let ContactDetailVC = ContactDetailVC(isContactDetail: true, contactChangesDelegate: self, contact: contact)
+        ContactDetailVC.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(ContactDetailVC, animated: true)
     }
 
     //MARK: - TableViewData Source
@@ -68,20 +67,44 @@ class ContactListController: UIViewController, UITableViewDataSource, UITableVie
         model.contacts.value[indexPath.row].cellHeight
     }
 
-    //MARK: - AddContactDelegate
-    func contactDidAdd() {
+    //MARK: - RecordChangesDelegate
+
+    func recordDidAdd() {
         globalBackGroundQueue.async { [weak self] in
             guard let weakSelf = self else {return}
-            weakSelf.model.contacts.value = weakSelf.manager.getAllContacts().map({ContactListCellViewModel(usingContact: $0)})
+            weakSelf.model.contacts.value = weakSelf.manager.getAllRecords().map({ContactListCellViewModel(usingContact: $0)})
         }
+    }
+
+    func recordDidDelete(_ record: RecordProtocol) {
+        globalBackGroundQueue.async { [weak self] in
+            guard let weakSelf = self,
+                  let index = weakSelf.fetchIndex(forRecord: record) else {return}
+            weakSelf.model.contacts.value.remove(at: index)
+        }
+    }
+    
+    func recordDidEdit(_ record: RecordProtocol) {
+        globalBackGroundQueue.async { [weak self] in
+            guard let weakSelf = self,
+                  let index = weakSelf.fetchIndex(forRecord: record) else {return}
+            guard let newRecord = weakSelf.manager.getRecord(usingID: record.id) else {return}
+            weakSelf.model.contacts.value[index] = ContactListCellViewModel(usingContact: newRecord)
+        }
+    }
+
+    private func fetchIndex(forRecord record: RecordProtocol) -> Int?{
+        let id = record.id
+        guard let index = model.contacts.value.firstIndex(where: {$0.id == id}) else {return nil}
+        return index
     }
 
     //MARK: - Private
     ///presents add Contact form
     @objc private func presentsAddContactForm(){
-        let addContactVC = AddContactVC(addContactDelegate: self)
-        addContactVC.hidesBottomBarWhenPushed = true
-        self.present(UINavigationController(rootViewController: addContactVC), animated: true, completion: nil)
+        let ContactDetailVC = ContactDetailVC(isContactDetail: false, contactChangesDelegate: self, contact: nil)
+        ContactDetailVC.hidesBottomBarWhenPushed = true
+        self.present(UINavigationController(rootViewController: ContactDetailVC), animated: true, completion: nil)
     }
 
     
@@ -91,7 +114,7 @@ class ContactListController: UIViewController, UITableViewDataSource, UITableVie
             guard let weakSelf = self else { return }
 
             //set Contacts
-            weakSelf.model.contacts.value = weakSelf.manager.getAllContacts().map({ContactListCellViewModel(usingContact: $0)})
+            weakSelf.model.contacts.value = weakSelf.manager.getAllRecords().map({ContactListCellViewModel(usingContact: $0)})
             //set binding
             weakSelf.model.contacts.bindAndFire(listener: { [weak self] contacts in
                 DispatchQueue.main.async { [weak self] in

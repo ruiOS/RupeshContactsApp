@@ -7,15 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		772F8A0727D388E800984A19 /* NavItemsDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772F8A0627D388E800984A19 /* NavItemsDelegate.swift */; };
+		772F8A0927D398FA00984A19 /* ErrorDisplayProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772F8A0827D398FA00984A19 /* ErrorDisplayProtocol.swift */; };
+		772F8A0B27D399D700984A19 /* BaseRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772F8A0A27D399D700984A19 /* BaseRepository.swift */; };
+		772F8A0D27D39E2100984A19 /* RecordDeleteProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772F8A0C27D39E2100984A19 /* RecordDeleteProtocol.swift */; };
+		772F8A0F27D39ED200984A19 /* RecordProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772F8A0E27D39ED200984A19 /* RecordProtocol.swift */; };
+		772F8A1127D3A8AE00984A19 /* RecordChangesDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772F8A1027D3A8AE00984A19 /* RecordChangesDelegate.swift */; };
+		772F8A2B27D3C51F00984A19 /* CDContact+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772F8A2927D3C51F00984A19 /* CDContact+CoreDataClass.swift */; };
+		772F8A2C27D3C51F00984A19 /* CDContact+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772F8A2A27D3C51F00984A19 /* CDContact+CoreDataProperties.swift */; };
+		772F8A3C27D3C5AB00984A19 /* CDContactGroup+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772F8A3827D3C5AB00984A19 /* CDContactGroup+CoreDataClass.swift */; };
+		772F8A3D27D3C5AB00984A19 /* CDContactGroup+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772F8A3927D3C5AB00984A19 /* CDContactGroup+CoreDataProperties.swift */; };
+		772F8A4027D3C67E00984A19 /* CDContactGroup+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772F8A3F27D3C67E00984A19 /* CDContactGroup+Extensions.swift */; };
+		772F8A4227D3C6A400984A19 /* CDContact+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772F8A4127D3C6A400984A19 /* CDContact+Extensions.swift */; };
+		772F8A4427D3C81400984A19 /* BaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772F8A4327D3C81400984A19 /* BaseManager.swift */; };
 		772F99D927D0006800482D26 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772F99D827D0006800482D26 /* String+Extensions.swift */; };
 		772F99EF27D12A3F00482D26 /* RupeshContactsApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 772F99ED27D12A3F00482D26 /* RupeshContactsApp.xcdatamodeld */; };
-		772F99F227D12AF400482D26 /* CDContact+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772F99F027D12AF400482D26 /* CDContact+CoreDataClass.swift */; };
-		772F99F327D12AF400482D26 /* CDContact+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772F99F127D12AF400482D26 /* CDContact+CoreDataProperties.swift */; };
 		77578ACD2487CEBB006D2A7E /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77578ACC2487CEBB006D2A7E /* SettingsController.swift */; };
 		77578AE02487D70B006D2A7E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 77578AE22487D70B006D2A7E /* Localizable.strings */; };
 		77578AE62487D73E006D2A7E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 77578AE82487D73E006D2A7E /* InfoPlist.strings */; };
 		77578AEE2488C74C006D2A7E /* ContactListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77578AED2488C74C006D2A7E /* ContactListTableViewCell.swift */; };
-		77578AF62488CF55006D2A7E /* AddContactVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77578AF52488CF55006D2A7E /* AddContactVC.swift */; };
+		77578AF62488CF55006D2A7E /* ContactDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77578AF52488CF55006D2A7E /* ContactDetailVC.swift */; };
 		778B886827CCC1F000CFEE1D /* ManagedObjectProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 778B886627CCC1F000CFEE1D /* ManagedObjectProtocol.swift */; };
 		778B886927CCC1F000CFEE1D /* PersistentStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 778B886727CCC1F000CFEE1D /* PersistentStorage.swift */; };
 		778B886B27CCC21000CFEE1D /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 778B886A27CCC21000CFEE1D /* Contact.swift */; };
@@ -29,13 +40,13 @@
 		77B37D872487C713009DFB32 /* MainTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B37D852487C713009DFB32 /* MainTabViewController.swift */; };
 		77B37D892487C751009DFB32 /* ContactListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B37D882487C751009DFB32 /* ContactListController.swift */; };
 		77C8201C27CCC67F00793443 /* ContactRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C8201B27CCC67F00793443 /* ContactRepository.swift */; };
-		77C8202427CCEDF300793443 /* AddContactVCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C8202327CCEDF300793443 /* AddContactVCCell.swift */; };
-		77C8202627CCFD3A00793443 /* AddContactVCDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C8202527CCFD3A00793443 /* AddContactVCDataModel.swift */; };
+		77C8202427CCEDF300793443 /* ContactDetailVCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C8202327CCEDF300793443 /* ContactDetailVCCell.swift */; };
+		77C8202627CCFD3A00793443 /* BoxedContactDetailVCDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C8202527CCFD3A00793443 /* BoxedContactDetailVCDataModel.swift */; };
 		77C8202827CCFD7400793443 /* InputDataType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C8202727CCFD7400793443 /* InputDataType.swift */; };
 		77C8202B27CCFDCA00793443 /* ContactListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C8202A27CCFDCA00793443 /* ContactListViewModel.swift */; };
 		77C8203327CCFFFB00793443 /* RupeshContactsAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C8203227CCFFFB00793443 /* RupeshContactsAppTests.swift */; };
 		77C8204327CE509F00793443 /* ContactManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C8204227CE509E00793443 /* ContactManager.swift */; };
-		77C8204827CE5AFB00793443 /* AddContactVCCellDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C8204727CE5AFB00793443 /* AddContactVCCellDataModel.swift */; };
+		77C8204827CE5AFB00793443 /* ContactDetailVCCellDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C8204727CE5AFB00793443 /* ContactDetailVCCellDataModel.swift */; };
 		77C8204C27CEBE9600793443 /* ContactListCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C8204B27CEBE9600793443 /* ContactListCellViewModel.swift */; };
 		77C8205027CEBF6200793443 /* ContactProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C8204E27CEBF6200793443 /* ContactProtocol.swift */; };
 		77C8205127CEBF6200793443 /* AddContactVCCellDataModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C8204F27CEBF6200793443 /* AddContactVCCellDataModelProtocol.swift */; };
@@ -58,15 +69,27 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		772F8A0527D2C0FF00984A19 /* RupeshContactsApp 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "RupeshContactsApp 2.xcdatamodel"; sourceTree = "<group>"; };
+		772F8A0627D388E800984A19 /* NavItemsDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NavItemsDelegate.swift; path = RupeshContactsapp/Common/Protocols/NavItemsDelegate.swift; sourceTree = SOURCE_ROOT; };
+		772F8A0827D398FA00984A19 /* ErrorDisplayProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ErrorDisplayProtocol.swift; path = RupeshContactsapp/Common/Protocols/ErrorDisplayProtocol.swift; sourceTree = SOURCE_ROOT; };
+		772F8A0A27D399D700984A19 /* BaseRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BaseRepository.swift; path = RupeshContactsapp/Repository/BaseRepository.swift; sourceTree = SOURCE_ROOT; };
+		772F8A0C27D39E2100984A19 /* RecordDeleteProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RecordDeleteProtocol.swift; path = RupeshContactsapp/Common/Protocols/RecordDeleteProtocol.swift; sourceTree = SOURCE_ROOT; };
+		772F8A0E27D39ED200984A19 /* RecordProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RecordProtocol.swift; path = "RupeshContactsapp/Models/Abstraction Protocols/RecordProtocol.swift"; sourceTree = SOURCE_ROOT; };
+		772F8A1027D3A8AE00984A19 /* RecordChangesDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RecordChangesDelegate.swift; path = RupeshContactsapp/Common/Protocols/RecordChangesDelegate.swift; sourceTree = SOURCE_ROOT; };
+		772F8A2927D3C51F00984A19 /* CDContact+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "CDContact+CoreDataClass.swift"; path = "RupeshContactsApp/CoreData/NSManagedObject/CDContact/CDContact+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		772F8A2A27D3C51F00984A19 /* CDContact+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "CDContact+CoreDataProperties.swift"; path = "RupeshContactsApp/CoreData/NSManagedObject/CDContact/CDContact+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		772F8A3827D3C5AB00984A19 /* CDContactGroup+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDContactGroup+CoreDataClass.swift"; sourceTree = "<group>"; };
+		772F8A3927D3C5AB00984A19 /* CDContactGroup+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDContactGroup+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		772F8A3F27D3C67E00984A19 /* CDContactGroup+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CDContactGroup+Extensions.swift"; path = "RupeshContactsapp/CoreData/NSManagedObject/CDContactGroup/CDContactGroup+Extensions.swift"; sourceTree = SOURCE_ROOT; };
+		772F8A4127D3C6A400984A19 /* CDContact+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CDContact+Extensions.swift"; path = "RupeshContactsapp/CoreData/NSManagedObject/CDContact/CDContact+Extensions.swift"; sourceTree = SOURCE_ROOT; };
+		772F8A4327D3C81400984A19 /* BaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BaseManager.swift; path = RupeshContactsapp/Manager/BaseManager.swift; sourceTree = SOURCE_ROOT; };
 		772F99D827D0006800482D26 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "String+Extensions.swift"; path = "RupeshContactsApp/Common/Base Classes/Extensions/String+Extensions.swift"; sourceTree = SOURCE_ROOT; };
 		772F99EE27D12A3F00482D26 /* RupeshContactsApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RupeshContactsApp.xcdatamodel; sourceTree = "<group>"; };
-		772F99F027D12AF400482D26 /* CDContact+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDContact+CoreDataClass.swift"; sourceTree = "<group>"; };
-		772F99F127D12AF400482D26 /* CDContact+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDContact+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		77578ACC2487CEBB006D2A7E /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
 		77578AE32487D70E006D2A7E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		77578AE72487D73E006D2A7E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		77578AED2488C74C006D2A7E /* ContactListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListTableViewCell.swift; sourceTree = "<group>"; };
-		77578AF52488CF55006D2A7E /* AddContactVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactVC.swift; sourceTree = "<group>"; };
+		77578AF52488CF55006D2A7E /* ContactDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailVC.swift; sourceTree = "<group>"; };
 		778B886627CCC1F000CFEE1D /* ManagedObjectProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ManagedObjectProtocol.swift; path = "RupeshContactsapp/CoreData/Support Files/ManagedObjectProtocol.swift"; sourceTree = SOURCE_ROOT; };
 		778B886727CCC1F000CFEE1D /* PersistentStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PersistentStorage.swift; path = "RupeshContactsapp/CoreData/Support Files/PersistentStorage.swift"; sourceTree = SOURCE_ROOT; };
 		778B886A27CCC21000CFEE1D /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Contact.swift; path = RupeshContactsapp/Models/Contact.swift; sourceTree = SOURCE_ROOT; };
@@ -82,14 +105,14 @@
 		77C4EDBF24A3C1CC003F803C /* te */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = te; path = te.lproj/Localizable.strings; sourceTree = "<group>"; };
 		77C4EDC024A3C1CC003F803C /* te */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = te; path = te.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		77C8201B27CCC67F00793443 /* ContactRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContactRepository.swift; path = RupeshContactsapp/Repository/ContactRepository.swift; sourceTree = SOURCE_ROOT; };
-		77C8202327CCEDF300793443 /* AddContactVCCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AddContactVCCell.swift; path = "RupeshContactsapp/View Controllers/AddContact/View/AddContactVCCell.swift"; sourceTree = SOURCE_ROOT; };
-		77C8202527CCFD3A00793443 /* AddContactVCDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AddContactVCDataModel.swift; path = "RupeshContactsApp/View Model/AddContactVCDataModel.swift"; sourceTree = SOURCE_ROOT; };
+		77C8202327CCEDF300793443 /* ContactDetailVCCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ContactDetailVCCell.swift; path = "RupeshContactsapp/View Controllers/AddContact/View/ContactDetailVCCell.swift"; sourceTree = SOURCE_ROOT; };
+		77C8202527CCFD3A00793443 /* BoxedContactDetailVCDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BoxedContactDetailVCDataModel.swift; path = "RupeshContactsApp/View Model/BoxedContactDetailVCDataModel.swift"; sourceTree = SOURCE_ROOT; };
 		77C8202727CCFD7400793443 /* InputDataType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InputDataType.swift; path = "RupeshContactsApp/View Model/Enum/InputDataType.swift"; sourceTree = SOURCE_ROOT; };
 		77C8202A27CCFDCA00793443 /* ContactListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContactListViewModel.swift; path = "RupeshContactsapp/View Model/ContactListViewModel.swift"; sourceTree = SOURCE_ROOT; };
 		77C8203027CCFFFB00793443 /* RupeshContactsAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RupeshContactsAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		77C8203227CCFFFB00793443 /* RupeshContactsAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RupeshContactsAppTests.swift; sourceTree = "<group>"; };
 		77C8204227CE509E00793443 /* ContactManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ContactManager.swift; path = RupeshContactsapp/Manager/ContactManager.swift; sourceTree = SOURCE_ROOT; };
-		77C8204727CE5AFB00793443 /* AddContactVCCellDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AddContactVCCellDataModel.swift; path = "RupeshContactsApp/View Model/AddContactVCCellDataModel.swift"; sourceTree = SOURCE_ROOT; };
+		77C8204727CE5AFB00793443 /* ContactDetailVCCellDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ContactDetailVCCellDataModel.swift; path = "RupeshContactsApp/View Model/ContactDetailVCCellDataModel.swift"; sourceTree = SOURCE_ROOT; };
 		77C8204B27CEBE9600793443 /* ContactListCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ContactListCellViewModel.swift; path = "RupeshContactsapp/View Model/ContactListCellViewModel.swift"; sourceTree = SOURCE_ROOT; };
 		77C8204E27CEBF6200793443 /* ContactProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContactProtocol.swift; path = "RupeshContactsapp/Models/Abstraction Protocols/ContactProtocol.swift"; sourceTree = SOURCE_ROOT; };
 		77C8204F27CEBF6200793443 /* AddContactVCCellDataModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddContactVCCellDataModelProtocol.swift; path = "RupeshContactsApp/View Model/Abstraction Protocols/AddContactVCCellDataModelProtocol.swift"; sourceTree = SOURCE_ROOT; };
@@ -121,6 +144,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		772F8A2827D3C51000984A19 /* NSManagedObject */ = {
+			isa = PBXGroup;
+			children = (
+				772F8A3E27D3C63000984A19 /* CDContactGroup */,
+				772F8A2D27D3C52900984A19 /* CDContact */,
+			);
+			path = NSManagedObject;
+			sourceTree = "<group>";
+		};
+		772F8A2D27D3C52900984A19 /* CDContact */ = {
+			isa = PBXGroup;
+			children = (
+				772F8A2927D3C51F00984A19 /* CDContact+CoreDataClass.swift */,
+				772F8A2A27D3C51F00984A19 /* CDContact+CoreDataProperties.swift */,
+				772F8A4127D3C6A400984A19 /* CDContact+Extensions.swift */,
+			);
+			path = CDContact;
+			sourceTree = "<group>";
+		};
+		772F8A3E27D3C63000984A19 /* CDContactGroup */ = {
+			isa = PBXGroup;
+			children = (
+				772F8A3827D3C5AB00984A19 /* CDContactGroup+CoreDataClass.swift */,
+				772F8A3927D3C5AB00984A19 /* CDContactGroup+CoreDataProperties.swift */,
+				772F8A3F27D3C67E00984A19 /* CDContactGroup+Extensions.swift */,
+			);
+			path = CDContactGroup;
+			sourceTree = "<group>";
+		};
 		772F99DA27D0006D00482D26 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -186,25 +238,17 @@
 		778B886C27CCC26400CFEE1D /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				772F8A0A27D399D700984A19 /* BaseRepository.swift */,
 				77C8201B27CCC67F00793443 /* ContactRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
 		};
-		77AA3EEF27CBF07E000A3F1D /* NSManagedObject */ = {
-			isa = PBXGroup;
-			children = (
-				772F99F027D12AF400482D26 /* CDContact+CoreDataClass.swift */,
-				772F99F127D12AF400482D26 /* CDContact+CoreDataProperties.swift */,
-			);
-			path = NSManagedObject;
-			sourceTree = "<group>";
-		};
 		77AA3EF827CCA09E000A3F1D /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				772F8A2827D3C51000984A19 /* NSManagedObject */,
 				77AA3EF927CCA0B9000A3F1D /* Support Files */,
-				77AA3EEF27CBF07E000A3F1D /* NSManagedObject */,
 				77578AF22488CD22006D2A7E /* CoreDataModel */,
 			);
 			path = CoreData;
@@ -254,7 +298,7 @@
 		77C8202027CCED7A00793443 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				77C8202327CCEDF300793443 /* AddContactVCCell.swift */,
+				77C8202327CCEDF300793443 /* ContactDetailVCCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -262,7 +306,7 @@
 		77C8202227CCEDE100793443 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				77578AF52488CF55006D2A7E /* AddContactVC.swift */,
+				77578AF52488CF55006D2A7E /* ContactDetailVC.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -274,8 +318,8 @@
 				77C8204D27CEBF0600793443 /* Abstraction Protocols */,
 				77C8202A27CCFDCA00793443 /* ContactListViewModel.swift */,
 				77C8204B27CEBE9600793443 /* ContactListCellViewModel.swift */,
-				77C8202527CCFD3A00793443 /* AddContactVCDataModel.swift */,
-				77C8204727CE5AFB00793443 /* AddContactVCCellDataModel.swift */,
+				77C8202527CCFD3A00793443 /* BoxedContactDetailVCDataModel.swift */,
+				77C8204727CE5AFB00793443 /* ContactDetailVCCellDataModel.swift */,
 			);
 			path = "View Model";
 			sourceTree = "<group>";
@@ -310,6 +354,7 @@
 			isa = PBXGroup;
 			children = (
 				77C8204227CE509E00793443 /* ContactManager.swift */,
+				772F8A4327D3C81400984A19 /* BaseManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -318,6 +363,7 @@
 			isa = PBXGroup;
 			children = (
 				77C8204E27CEBF6200793443 /* ContactProtocol.swift */,
+				772F8A0E27D39ED200984A19 /* RecordProtocol.swift */,
 			);
 			path = "Abstraction Protocols";
 			sourceTree = "<group>";
@@ -343,6 +389,10 @@
 			isa = PBXGroup;
 			children = (
 				77C8208D27CFE86F00793443 /* TextFieldEditingEventsDelegate.swift */,
+				772F8A0627D388E800984A19 /* NavItemsDelegate.swift */,
+				772F8A0827D398FA00984A19 /* ErrorDisplayProtocol.swift */,
+				772F8A0C27D39E2100984A19 /* RecordDeleteProtocol.swift */,
+				772F8A1027D3A8AE00984A19 /* RecordChangesDelegate.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -497,6 +547,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				77C8202B27CCFDCA00793443 /* ContactListViewModel.swift in Sources */,
+				772F8A0727D388E800984A19 /* NavItemsDelegate.swift in Sources */,
+				772F8A4427D3C81400984A19 /* BaseManager.swift in Sources */,
+				772F8A0F27D39ED200984A19 /* RecordProtocol.swift in Sources */,
 				77578ACD2487CEBB006D2A7E /* SettingsController.swift in Sources */,
 				77578AEE2488C74C006D2A7E /* ContactListTableViewCell.swift in Sources */,
 				77B37D872487C713009DFB32 /* MainTabViewController.swift in Sources */,
@@ -504,31 +557,39 @@
 				77C8205527CEBFA000793443 /* RCTableView.swift in Sources */,
 				77C8208E27CFE86F00793443 /* TextFieldEditingEventsDelegate.swift in Sources */,
 				778B886927CCC1F000CFEE1D /* PersistentStorage.swift in Sources */,
+				772F8A1127D3A8AE00984A19 /* RecordChangesDelegate.swift in Sources */,
 				77C8205427CEBFA000793443 /* RCTableViewCell.swift in Sources */,
 				77C8202827CCFD7400793443 /* InputDataType.swift in Sources */,
 				77C8205727CEBFC200793443 /* TableViewCellDataModelProtocol.swift in Sources */,
 				778B886B27CCC21000CFEE1D /* Contact.swift in Sources */,
 				77B37D892487C751009DFB32 /* ContactListController.swift in Sources */,
-				77C8202627CCFD3A00793443 /* AddContactVCDataModel.swift in Sources */,
+				772F8A2C27D3C51F00984A19 /* CDContact+CoreDataProperties.swift in Sources */,
+				77C8202627CCFD3A00793443 /* BoxedContactDetailVCDataModel.swift in Sources */,
 				77B37D822487C6CE009DFB32 /* AppSettingsManager.swift in Sources */,
-				772F99F227D12AF400482D26 /* CDContact+CoreDataClass.swift in Sources */,
 				778B887227CCC47300CFEE1D /* LocalisedString.swift in Sources */,
+				772F8A3D27D3C5AB00984A19 /* CDContactGroup+CoreDataProperties.swift in Sources */,
+				772F8A3C27D3C5AB00984A19 /* CDContactGroup+CoreDataClass.swift in Sources */,
 				77C8204C27CEBE9600793443 /* ContactListCellViewModel.swift in Sources */,
 				77C8204327CE509F00793443 /* ContactManager.swift in Sources */,
 				772F99EF27D12A3F00482D26 /* RupeshContactsApp.xcdatamodeld in Sources */,
 				77B37D7A2487C689009DFB32 /* AppDelegate.swift in Sources */,
 				77AA3EE827CBDCDF000A3F1D /* Box.swift in Sources */,
-				772F99F327D12AF400482D26 /* CDContact+CoreDataProperties.swift in Sources */,
-				77C8202427CCEDF300793443 /* AddContactVCCell.swift in Sources */,
+				772F8A0D27D39E2100984A19 /* RecordDeleteProtocol.swift in Sources */,
+				772F8A2B27D3C51F00984A19 /* CDContact+CoreDataClass.swift in Sources */,
+				772F8A0927D398FA00984A19 /* ErrorDisplayProtocol.swift in Sources */,
+				772F8A4227D3C6A400984A19 /* CDContact+Extensions.swift in Sources */,
+				77C8202427CCEDF300793443 /* ContactDetailVCCell.swift in Sources */,
 				778B887027CCC3DE00CFEE1D /* AppStrings.swift in Sources */,
 				77C8205027CEBF6200793443 /* ContactProtocol.swift in Sources */,
 				77C8201C27CCC67F00793443 /* ContactRepository.swift in Sources */,
 				77B37D812487C6CE009DFB32 /* AppColors.swift in Sources */,
+				772F8A0B27D399D700984A19 /* BaseRepository.swift in Sources */,
 				778B886827CCC1F000CFEE1D /* ManagedObjectProtocol.swift in Sources */,
-				77C8204827CE5AFB00793443 /* AddContactVCCellDataModel.swift in Sources */,
+				772F8A4027D3C67E00984A19 /* CDContactGroup+Extensions.swift in Sources */,
+				77C8204827CE5AFB00793443 /* ContactDetailVCCellDataModel.swift in Sources */,
 				77B37D7B2487C689009DFB32 /* SceneDelegate.swift in Sources */,
 				77C8205127CEBF6200793443 /* AddContactVCCellDataModelProtocol.swift in Sources */,
-				77578AF62488CF55006D2A7E /* AddContactVC.swift in Sources */,
+				77578AF62488CF55006D2A7E /* ContactDetailVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -808,9 +869,10 @@
 		772F99ED27D12A3F00482D26 /* RupeshContactsApp.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				772F8A0527D2C0FF00984A19 /* RupeshContactsApp 2.xcdatamodel */,
 				772F99EE27D12A3F00482D26 /* RupeshContactsApp.xcdatamodel */,
 			);
-			currentVersion = 772F99EE27D12A3F00482D26 /* RupeshContactsApp.xcdatamodel */;
+			currentVersion = 772F8A0527D2C0FF00984A19 /* RupeshContactsApp 2.xcdatamodel */;
 			name = RupeshContactsApp.xcdatamodeld;
 			path = ../../../RupeshContactsapp/CoreData/CoreDataModel/RupeshContactsApp.xcdatamodeld;
 			sourceTree = "<group>";

@@ -1,5 +1,5 @@
 //
-//  ContactRepositoryProtocol.swift
+//  ContactRepository.swift
 //  RupeshContactsApp
 //
 //  Created by rupesh on 28/02/22.
@@ -9,55 +9,16 @@
 import Foundation
 import CoreData
 
-/// Protocol  to create a repository for contacts
-protocol ContactRepositoryProtocol{
-    /**
-     Use this method to create a CDContact object and save in DB
-     - Parameter contact: Contact type dataModel to be saved as contact
-    */
-    func create(contact: Contact)
-    
-    /**
-     Returns all contacts from DB
-     - returns: array of contacts present in db
-     */
-    func getAll() -> [Contact]
-
-    /**
-     returns contact using id
-     
-     - parameter id: id of the contact.
-     - returns: Contact filtered using id of the contact
-     - warning: returns nil value if contact is not present
-     */
-    func get(byIdentifier id: UUID) -> Contact?
-
-    /**
-     update contact and returns if update is successful
-     
-     - parameter contact: contact needed to be updated
-     - returns: returns if contact update is successful
-     */
-    func update(contact: Contact) -> Bool
-
-    /**
-     delete contact and returns if delete is successful
-     
-     - parameter contact: contact needed to be deleted
-     - returns: returns if contact delete is successful
-     */
-    func delete(usingID id: UUID) -> Bool
-}
 
 /**
  Reposiotry handles contact data
  
  - Note
-    Inherits from ContactRepositoryProtocol
+    Inherits from BaseRepositoy
  */
-struct ContactDataRepository: ContactRepositoryProtocol{
+struct ContactRepository: BaseRepository{
 
-    func create(contact: Contact) {
+    func create(record contact: Contact) {
         
         let cdContact = CDContact(context: PersistentStorage.shared.context)
 
@@ -83,7 +44,7 @@ struct ContactDataRepository: ContactRepositoryProtocol{
         return fetchResult.first?.convertToContact()
     }
     
-    func update(contact: Contact) -> Bool {
+    func update(record contact: Contact) -> Bool {
         guard let fetchResult: [CDContact] = PersistentStorage.shared.fetchObjects(usingPredicate: NSPredicate(format: "id==%@", contact.id as CVarArg), withSortDescriptors: nil),
               !fetchResult.isEmpty,
               let cdContact = fetchResult.first else { return false}

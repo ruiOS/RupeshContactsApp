@@ -18,6 +18,15 @@ protocol TableViewCellDataModelProtocol{
 
 }
 
+///use this to create datamodel for cells
+protocol CoreDataCellModelProtocol{
+
+    associatedtype Item
+
+    var id: Item{get set}
+    
+}
+
 ///use this to create datamodel for cells with image data
 protocol TableViewCellImageDataModelProtocol{
     var imageData: Data? { get set }

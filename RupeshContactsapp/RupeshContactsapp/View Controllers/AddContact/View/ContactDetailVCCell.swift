@@ -1,5 +1,5 @@
 //
-//  AddContactVCCell.swift
+//  ContactDetailVCCell.swift
 //  RupeshContactsApp
 //
 //  Created by rupesh on 28/02/22.
@@ -15,22 +15,22 @@ import UIKit
 }
 
 /// delegate of methos used in AddContact VC Cell
-protocol AddContactVCCellDelegate: ContactImagePickerDelegate{
+protocol ContactDetailVCCellDelegate: ContactImagePickerDelegate{
     /**
      called when view model's input data is changes
      - parameter newCellViewModel: new model after input is changed
      */
-    func viewModelInputDidChange(newCellViewModel: AddContactVCCellDataModelProtocol?)
+    func viewModelInputDidChange(newCellViewModel: ContactDetailVCCellDataModelProtocol?)
 
     /**
      method called when textfield input value is changed
      - parameter viewModel: viewmodel after input is updated
      */
-    func textFieldInputDidChange(viewModel: AddContactVCCellDataModelProtocol?)
+    func textFieldInputDidChange(viewModel: ContactDetailVCCellDataModelProtocol?)
 }
 
 ///cell used to input contact object values
-class AddContactVCCell: RCTableViewCell, UITextFieldDelegate, TextFieldEditingEventsDelegate{
+class ContactDetailVCCell: RCTableViewCell, UITextFieldDelegate, TextFieldEditingEventsDelegate{
 
     //MARK: - Views
     ///placeHolderLabel to show contact numbers
@@ -64,15 +64,15 @@ class AddContactVCCell: RCTableViewCell, UITextFieldDelegate, TextFieldEditingEv
 
     //MARK: - Data
     ///reuse identifier of cell
-    static let reuseIdentifier = "AddContactVCCell"
+    static let reuseIdentifier = "ContactDetailVCCell"
 
     ///delegate to handle input data changes
-    var delegate: (AddContactVCCellDelegate)?{
+    var delegate: (ContactDetailVCCellDelegate)?{
         didSet{
             contactImageViewButton.removeTarget(self, action: nil, for: .touchUpInside)
             if let delegate = delegate,
                let viewModel = viewModel,
-               viewModel.inputDataType.isContactPic {
+               viewModel.inputDataType.isContactPic, viewModel.isInputEnabled {
                 contactImageViewButton.addTarget(delegate, action: #selector(delegate.openImagePicker), for: .touchUpInside)
             }
         }
@@ -80,23 +80,27 @@ class AddContactVCCell: RCTableViewCell, UITextFieldDelegate, TextFieldEditingEv
 
     //MARK: - ViewModel
     ///viewModel of the cell
-    var viewModel: AddContactVCCellDataModelProtocol?{
+    var viewModel: ContactDetailVCCellDataModelProtocol?{
         didSet{
             guard let viewModel = viewModel else {return}
+            let isInputEnabled = viewModel.isInputEnabled
+
             func setTextField(){
                 addViewsForTextEditing()
                 self.inputTextField.text = viewModel.input as? String
                 self.inputTextField.placeholder = viewModel.placeHolder
+                self.inputTextField.isEnabled = isInputEnabled
             }
             switch viewModel.inputDataType{
             case .firstName, .lastName, .middleName:
                 setTextField()
             case .contactNumber:
                 self.inputTextField.keyboardType = .phonePad
+                self.inputTextField.isEnabled = isInputEnabled
                 self.inputTextField.returnKeyType = .default
                 setTextField()
             case .contactPic(let isPictureAvailable):
-                addViewsForAddingPicture()
+                setProfilePictureView(isInputEnabled: isInputEnabled)
                 backgroundColor = AppColors.tableViewBackGroundColor
                 if isPictureAvailable,
                    let imageData = viewModel.input as? Data{
@@ -168,7 +172,7 @@ class AddContactVCCell: RCTableViewCell, UITextFieldDelegate, TextFieldEditingEv
     }
 
     ///method adds contactImageViewButton to the cell
-    private func addViewsForAddingPicture(){
+    private func setProfilePictureView(isInputEnabled: Bool){
 
         self.contentView.addSubview(contactImageViewButton)
         NSLayoutConstraint.activate([
@@ -178,14 +182,18 @@ class AddContactVCCell: RCTableViewCell, UITextFieldDelegate, TextFieldEditingEv
             contactImageViewButton.heightAnchor.constraint(equalTo: contactImageViewButton.widthAnchor)
         ])
 
-        contactImageViewButton.addSubview(placeHolderLabel)
-
-        NSLayoutConstraint.activate([
-            placeHolderLabel.centerXAnchor.constraint(equalTo: contactImageViewButton.centerXAnchor),
-            NSLayoutConstraint(item: placeHolderLabel, attribute: .centerY, relatedBy: .equal, toItem: self, attribute: .bottom, multiplier: 0.75, constant: 0),
-            placeHolderLabel.widthAnchor.constraint(equalTo: contactImageViewButton.widthAnchor),
-            NSLayoutConstraint(item: placeHolderLabel, attribute: .height, relatedBy: .equal, toItem: contactImageViewButton, attribute: .height, multiplier: 0.5, constant: 0)
-        ])
+        if isInputEnabled{
+            if let delegate = delegate {
+                contactImageViewButton.addTarget(delegate, action: #selector(delegate.openImagePicker), for: .touchUpInside)
+            }
+            contactImageViewButton.addSubview(placeHolderLabel)
+            NSLayoutConstraint.activate([
+                placeHolderLabel.centerXAnchor.constraint(equalTo: contactImageViewButton.centerXAnchor),
+                NSLayoutConstraint(item: placeHolderLabel, attribute: .centerY, relatedBy: .equal, toItem: self, attribute: .bottom, multiplier: 0.75, constant: 0),
+                placeHolderLabel.widthAnchor.constraint(equalTo: contactImageViewButton.widthAnchor),
+                NSLayoutConstraint(item: placeHolderLabel, attribute: .height, relatedBy: .equal, toItem: contactImageViewButton, attribute: .height, multiplier: 0.5, constant: 0)
+            ])
+        }
     }
 
     //MARK: - UITExtField Delegate

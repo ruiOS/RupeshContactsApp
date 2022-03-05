@@ -1,5 +1,5 @@
 //
-//  AddContactVCCellDataModelProtocol.swift
+//  ContactDetailVCCellDataModelProtocol.swift
 //  RupeshContactsApp
 //
 //  Created by rupesh on 01/03/22.
@@ -10,7 +10,7 @@ import Foundation
 import CoreGraphics
 
 /// used this to create data models for add form fields
-protocol AddContactVCCellDataModelProtocol{
+protocol ContactDetailVCCellDataModelProtocol{
 
     /// place holder of cell
     var placeHolder: String {get set}
@@ -20,5 +20,7 @@ protocol AddContactVCCellDataModelProtocol{
     var inputDataType: InputDataType {get set}
     /// height of cell
     var cellHeight: CGFloat {get}
+    ///Returns if input is Enabled
+    var isInputEnabled:Bool {get set}
 
 }

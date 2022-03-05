@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19574" systemVersion="21D62" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="CDContact" representedClassName="CDContact" syncable="YES">
+        <attribute name="contactNumber" optional="YES" attributeType="String"/>
+        <attribute name="contactPic" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES"/>
+        <attribute name="firstName" optional="YES" attributeType="String"/>
+        <attribute name="id" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="lastName" optional="YES" attributeType="String"/>
+        <attribute name="middleName" optional="YES" attributeType="String"/>
+        <relationship name="toCDContactGroup" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CDContactGroup" inverseName="toCDContact" inverseEntity="CDContactGroup"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="id"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <entity name="CDContactGroup" representedClassName="CDContactGroup" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="toCDContact" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CDContact" inverseName="toCDContactGroup" inverseEntity="CDContact"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="id"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <elements>
+        <element name="CDContact" positionX="-45" positionY="0" width="128" height="134"/>
+        <element name="CDContactGroup" positionX="-45" positionY="45" width="128" height="74"/>
+    </elements>
+</model>

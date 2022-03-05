@@ -1,5 +1,5 @@
 //
-//  AddContactVCCellDataModel.swift
+//  ContactDetailVCCellDataModel.swift
 //  RupeshContactsApp
 //
 //  Created by rupesh on 01/03/22.
@@ -9,9 +9,9 @@
 import Foundation
 import CoreGraphics
 
-///Data model for AddContactVCCell
-struct AddContactVCCellDataModel: AddContactVCCellDataModelProtocol{
-
+///Data model for ContactDetailVCCell
+struct ContactDetailVCCellDataModel: ContactDetailVCCellDataModelProtocol{
+    
     var placeHolder: String{
         get{
             inputDataType.getPlaceHolder()
@@ -22,5 +22,6 @@ struct AddContactVCCellDataModel: AddContactVCCellDataModelProtocol{
     var cellHeight: CGFloat{
         inputDataType.isContactPic ? 175 : 75
     }
+    var isInputEnabled: Bool = true
 
 }

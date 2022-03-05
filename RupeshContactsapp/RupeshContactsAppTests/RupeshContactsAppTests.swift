@@ -47,8 +47,8 @@ class RupeshContactsAppTests: XCTestCase {
     }
 
     func testTypes(){
-        let viewModel = AddContactVCDataModel()
-        viewModel.dataFieldModel.value.dataFields = InputDataType.allCases.map({ AddContactVCCellDataModel(input: nil, inputDataType: $0)})
+        let viewModel = BoxedContactDetailVCDataModel()
+        viewModel.dataFieldModel.value.dataFields = InputDataType.allCases.map({ ContactDetailVCCellDataModel(input: nil, inputDataType: $0)})
 
         for i in 0..<viewModel.dataFieldModel.value.dataFields.count{
             for j in 0..<viewModel.dataFieldModel.value.dataFields.count{
