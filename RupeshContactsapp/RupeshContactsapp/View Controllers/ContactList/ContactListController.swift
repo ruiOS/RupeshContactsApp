@@ -21,6 +21,8 @@ class ContactListController: UIViewController, UITableViewDataSource, UITableVie
     /// GlobalQueue with utility qos
     let globalBackGroundQueue = DispatchQueue.global(qos: .utility)
 
+    private var isReloadTableView: Bool = true
+
     //MARK: - Views
     ///tableView that display contacts
     private lazy var contactListTableview: RCTableView = RCTableView(onView: self.view, withViewcontroller: self, dataSource: true, delegate: true)
@@ -59,6 +61,23 @@ class ContactListController: UIViewController, UITableViewDataSource, UITableVie
         let ContactDetailVC = ContactDetailVC(isContactDetail: true, contactChangesDelegate: self, contact: contact)
         ContactDetailVC.hidesBottomBarWhenPushed = true
         navigationController?.pushViewController(ContactDetailVC, animated: true)
+    }
+
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        guard editingStyle == .delete else { return }
+        DispatchQueue.global(qos: .userInteractive).async { [weak self] in
+            guard let weakSelf = self else {return}
+            weakSelf.isReloadTableView = false
+            let row = indexPath.row
+            if weakSelf.manager.deleteRecord(usingID: weakSelf.model.contacts.value[row].id){
+                weakSelf.model.contacts.value.remove(at: row)
+                DispatchQueue.main.async { [weak self] in
+                    tableView.beginUpdates()
+                    tableView.deleteRows(at: [indexPath], with: .left)
+                    tableView.endUpdates()
+                }
+            }
+        }
     }
 
     //MARK: - TableViewData Source
@@ -109,7 +128,7 @@ class ContactListController: UIViewController, UITableViewDataSource, UITableVie
 
     
     /// set model and method calls for the model
-    func setViewModel(){
+    private func setViewModel(){
         globalBackGroundQueue.async { [weak self] in
             guard let weakSelf = self else { return }
 
@@ -119,6 +138,10 @@ class ContactListController: UIViewController, UITableViewDataSource, UITableVie
             weakSelf.model.contacts.bindAndFire(listener: { [weak self] contacts in
                 DispatchQueue.main.async { [weak self] in
                     guard let weakSelf = self else {return}
+                    guard weakSelf.isReloadTableView else {
+                        weakSelf.isReloadTableView = true
+                        return
+                    }
                     weakSelf.contactListTableview.reloadData()
                 }
             })

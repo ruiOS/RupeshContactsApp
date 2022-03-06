@@ -1,5 +1,5 @@
 //
-//  SettingsController.swift
+//  ContactGroupController.swift
 //  RupeshContactsApp
 //
 //  Created by rupesh on 03/06/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SettingsController: UIViewController {
+class ContactGroupController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

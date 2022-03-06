@@ -30,15 +30,23 @@ class MainTabViewController: UITabBarController {
         UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font : UIFont(name: "Helvetica Neue", size: 12)!, NSAttributedString.Key.foregroundColor:AppColors.tabBarTintColor], for: [.selected])
 
         let contactListController = ContactListController()
-        let settingsController = SettingsController()
+        let contactGroupController = ContactGroupController()
 
         let contactListTabItem = UITabBarItem(tabBarSystemItem: .contacts, tag: 0)
-        let settingsTabItem = UITabBarItem(tabBarSystemItem: .more, tag: 1)
+
+        func getImageForContactGroups() -> UIImage?{
+            if #available(iOS 13.0, *) {
+                return UIImage(systemName: "person.3.fill")
+            }
+            return nil
+        }
+
+        let contactGroupTabItem = UITabBarItem(title: AppStrings.common_contactGroups, image: getImageForContactGroups(), tag: 1)
 
         contactListController.tabBarItem    =   contactListTabItem
-        settingsController.tabBarItem       =   settingsTabItem
+        contactGroupController.tabBarItem   =   contactGroupTabItem
 
-        let tabControllers: [UIViewController] = [contactListController, settingsController]
+        let tabControllers: [UIViewController] = [contactListController, contactGroupController]
 
         self.viewControllers = tabControllers.map { let aController = UINavigationController(rootViewController: $0)
             aController.view.backgroundColor = .white

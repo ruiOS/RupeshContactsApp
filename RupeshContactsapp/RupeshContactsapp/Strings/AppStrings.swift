@@ -14,9 +14,6 @@ struct AppStrings {
 
     @LocalisedString(key: "rca.ios.common.contacts", comment: "Contacts")
     static var common_contacts: String
-    
-    @LocalisedString(key: "rca.ios.common.settings", comment: "Settings")
-    static var common_settings: String
 
     @LocalisedString(key: "rca.ios.common.firstName", comment: "First Name")
     static var common_firstName: String
@@ -68,5 +65,8 @@ struct AppStrings {
 
     @LocalisedString(key: "rca.ios.edit.recordNotFound", comment: "Record not found")
     static var form_alert_deleteRecordWarning: String
+
+    @LocalisedString(key: "rca.ios.common.contactGroups", comment: "Contact Groups")
+    static var common_contactGroups: String
 
 }

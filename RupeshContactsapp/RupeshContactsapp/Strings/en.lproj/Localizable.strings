@@ -9,7 +9,6 @@
 //common
 "rca.ios.common.rupeshContactsApp" = "Rupesh Contacts App";
 "rca.ios.common.contacts" = "Contacts";
-"rca.ios.common.settings" = "Settings";
 
 "rca.ios.common.firstName" = "First Name";
 "rca.ios.common.middleName" = "Middle Name";
@@ -31,3 +30,5 @@
 
 "rca.ios.edit.deleteRecordWarning" = "Are you sure you want to delete the Record?";
 "rca.ios.edit.recordNotFound" = "Record not found";
+
+"rca.ios.common.contactGroups" = "Contact Groups";

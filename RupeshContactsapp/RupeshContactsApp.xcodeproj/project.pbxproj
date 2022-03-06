@@ -22,7 +22,7 @@
 		772F8A4427D3C81400984A19 /* BaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772F8A4327D3C81400984A19 /* BaseManager.swift */; };
 		772F99D927D0006800482D26 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772F99D827D0006800482D26 /* String+Extensions.swift */; };
 		772F99EF27D12A3F00482D26 /* RupeshContactsApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 772F99ED27D12A3F00482D26 /* RupeshContactsApp.xcdatamodeld */; };
-		77578ACD2487CEBB006D2A7E /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77578ACC2487CEBB006D2A7E /* SettingsController.swift */; };
+		77578ACD2487CEBB006D2A7E /* ContactGroupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77578ACC2487CEBB006D2A7E /* ContactGroupController.swift */; };
 		77578AE02487D70B006D2A7E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 77578AE22487D70B006D2A7E /* Localizable.strings */; };
 		77578AE62487D73E006D2A7E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 77578AE82487D73E006D2A7E /* InfoPlist.strings */; };
 		77578AEE2488C74C006D2A7E /* ContactListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77578AED2488C74C006D2A7E /* ContactListTableViewCell.swift */; };
@@ -36,7 +36,6 @@
 		77B37D7A2487C689009DFB32 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B37D792487C689009DFB32 /* AppDelegate.swift */; };
 		77B37D7B2487C689009DFB32 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B37D782487C689009DFB32 /* SceneDelegate.swift */; };
 		77B37D812487C6CE009DFB32 /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B37D7D2487C6CD009DFB32 /* AppColors.swift */; };
-		77B37D822487C6CE009DFB32 /* AppSettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B37D7E2487C6CE009DFB32 /* AppSettingsManager.swift */; };
 		77B37D872487C713009DFB32 /* MainTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B37D852487C713009DFB32 /* MainTabViewController.swift */; };
 		77B37D892487C751009DFB32 /* ContactListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B37D882487C751009DFB32 /* ContactListController.swift */; };
 		77C8201C27CCC67F00793443 /* ContactRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C8201B27CCC67F00793443 /* ContactRepository.swift */; };
@@ -85,7 +84,7 @@
 		772F8A4327D3C81400984A19 /* BaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BaseManager.swift; path = RupeshContactsapp/Manager/BaseManager.swift; sourceTree = SOURCE_ROOT; };
 		772F99D827D0006800482D26 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "String+Extensions.swift"; path = "RupeshContactsApp/Common/Base Classes/Extensions/String+Extensions.swift"; sourceTree = SOURCE_ROOT; };
 		772F99EE27D12A3F00482D26 /* RupeshContactsApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RupeshContactsApp.xcdatamodel; sourceTree = "<group>"; };
-		77578ACC2487CEBB006D2A7E /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
+		77578ACC2487CEBB006D2A7E /* ContactGroupController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactGroupController.swift; sourceTree = "<group>"; };
 		77578AE32487D70E006D2A7E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		77578AE72487D73E006D2A7E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		77578AED2488C74C006D2A7E /* ContactListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListTableViewCell.swift; sourceTree = "<group>"; };
@@ -99,7 +98,6 @@
 		77B37D782487C689009DFB32 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		77B37D792487C689009DFB32 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		77B37D7D2487C6CD009DFB32 /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
-		77B37D7E2487C6CE009DFB32 /* AppSettingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettingsManager.swift; sourceTree = "<group>"; };
 		77B37D852487C713009DFB32 /* MainTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabViewController.swift; sourceTree = "<group>"; };
 		77B37D882487C751009DFB32 /* ContactListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactListController.swift; sourceTree = "<group>"; };
 		77C4EDBF24A3C1CC003F803C /* te */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = te; path = te.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -181,12 +179,12 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		77578ACE2487D09D006D2A7E /* Settings */ = {
+		77578ACE2487D09D006D2A7E /* ContactGroupList */ = {
 			isa = PBXGroup;
 			children = (
-				77578ACC2487CEBB006D2A7E /* SettingsController.swift */,
+				77578ACC2487CEBB006D2A7E /* ContactGroupController.swift */,
 			);
-			path = Settings;
+			path = ContactGroupList;
 			sourceTree = "<group>";
 		};
 		77578AD72487D520006D2A7E /* Strings */ = {
@@ -278,7 +276,6 @@
 				77C8208F27CFE9EC00793443 /* Protocols */,
 				77C8203927CD2AA800793443 /* Base Classes */,
 				77B37D7D2487C6CD009DFB32 /* AppColors.swift */,
-				77B37D7E2487C6CE009DFB32 /* AppSettingsManager.swift */,
 				77AA3EE727CBDCDF000A3F1D /* Box.swift */,
 			);
 			path = Common;
@@ -290,7 +287,7 @@
 				77B37D852487C713009DFB32 /* MainTabViewController.swift */,
 				77578AF32488CEFD006D2A7E /* ContactList */,
 				77578AF42488CF27006D2A7E /* AddContact */,
-				77578ACE2487D09D006D2A7E /* Settings */,
+				77578ACE2487D09D006D2A7E /* ContactGroupList */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -550,7 +547,7 @@
 				772F8A0727D388E800984A19 /* NavItemsDelegate.swift in Sources */,
 				772F8A4427D3C81400984A19 /* BaseManager.swift in Sources */,
 				772F8A0F27D39ED200984A19 /* RecordProtocol.swift in Sources */,
-				77578ACD2487CEBB006D2A7E /* SettingsController.swift in Sources */,
+				77578ACD2487CEBB006D2A7E /* ContactGroupController.swift in Sources */,
 				77578AEE2488C74C006D2A7E /* ContactListTableViewCell.swift in Sources */,
 				77B37D872487C713009DFB32 /* MainTabViewController.swift in Sources */,
 				772F99D927D0006800482D26 /* String+Extensions.swift in Sources */,
@@ -565,7 +562,6 @@
 				77B37D892487C751009DFB32 /* ContactListController.swift in Sources */,
 				772F8A2C27D3C51F00984A19 /* CDContact+CoreDataProperties.swift in Sources */,
 				77C8202627CCFD3A00793443 /* BoxedContactDetailVCDataModel.swift in Sources */,
-				77B37D822487C6CE009DFB32 /* AppSettingsManager.swift in Sources */,
 				778B887227CCC47300CFEE1D /* LocalisedString.swift in Sources */,
 				772F8A3D27D3C5AB00984A19 /* CDContactGroup+CoreDataProperties.swift in Sources */,
 				772F8A3C27D3C5AB00984A19 /* CDContactGroup+CoreDataClass.swift in Sources */,
