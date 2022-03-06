@@ -71,7 +71,7 @@ class ContactListController: UIViewController, UITableViewDataSource, UITableVie
             let row = indexPath.row
             if weakSelf.manager.deleteRecord(usingID: weakSelf.model.contacts.value[row].id){
                 weakSelf.model.contacts.value.remove(at: row)
-                DispatchQueue.main.async { [weak self] in
+                DispatchQueue.main.async {
                     tableView.beginUpdates()
                     tableView.deleteRows(at: [indexPath], with: .left)
                     tableView.endUpdates()
