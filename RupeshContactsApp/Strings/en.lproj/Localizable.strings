@@ -1,4 +1,4 @@
-/* 
+/*
   Localizable.strings
   RupeshContactsApp
 
@@ -7,8 +7,8 @@
 */
 
 //common
-"rca.ios.common.rupeshContactsApp" = "రూపేష్ కాంటాక్ట్స్ అప్లికేషన్";
-"rca.ios.common.contacts" = "కాంటాక్ట్స్";
+"rca.ios.common.rupeshContactsApp" = "Rupesh Contacts App";
+"rca.ios.common.contacts" = "Contacts";
 
 "rca.ios.common.firstName" = "First Name";
 "rca.ios.common.middleName" = "Middle Name";

@@ -1,0 +1,989 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		777275D727D4D1F90001434C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777275D627D4D1F90001434C /* AppDelegate.swift */; };
+		777275D927D4D1F90001434C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777275D827D4D1F90001434C /* SceneDelegate.swift */; };
+		777275E327D4D1FB0001434C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 777275E227D4D1FB0001434C /* Assets.xcassets */; };
+		777275E627D4D1FB0001434C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 777275E427D4D1FB0001434C /* LaunchScreen.storyboard */; };
+		777275F127D4D1FC0001434C /* RupeshContactsAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777275F027D4D1FC0001434C /* RupeshContactsAppTests.swift */; };
+		777275FB27D4D1FC0001434C /* RupeshContactsAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777275FA27D4D1FC0001434C /* RupeshContactsAppUITests.swift */; };
+		777275FD27D4D1FC0001434C /* RupeshContactsAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777275FC27D4D1FC0001434C /* RupeshContactsAppUITestsLaunchTests.swift */; };
+		7772761127D4D31C0001434C /* BaseRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7772760F27D4D31C0001434C /* BaseRepository.swift */; };
+		7772761227D4D31C0001434C /* ContactRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7772761027D4D31C0001434C /* ContactRepository.swift */; };
+		7772761627D4D35C0001434C /* ContactManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7772761427D4D35C0001434C /* ContactManager.swift */; };
+		7772761727D4D35C0001434C /* BaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7772761527D4D35C0001434C /* BaseManager.swift */; };
+		7772761A27D4D3960001434C /* MainTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7772761927D4D3960001434C /* MainTabViewController.swift */; };
+		7772762227D4D3F00001434C /* ContactListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7772762027D4D3F00001434C /* ContactListTableViewCell.swift */; };
+		7772762327D4D3F00001434C /* ContactListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7772762127D4D3F00001434C /* ContactListController.swift */; };
+		7772762727D4D49C0001434C /* ContactDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7772762527D4D49C0001434C /* ContactDetailVC.swift */; };
+		7772762827D4D49C0001434C /* ContactDetailVCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7772762627D4D49C0001434C /* ContactDetailVCCell.swift */; };
+		7772762B27D4D4C70001434C /* ContactGroupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7772762A27D4D4C70001434C /* ContactGroupController.swift */; };
+		7772762E27D4D4ED0001434C /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7772762D27D4D4EC0001434C /* Contact.swift */; };
+		7772763227D4D50D0001434C /* ContactProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7772763027D4D50D0001434C /* ContactProtocol.swift */; };
+		7772763327D4D50D0001434C /* RecordProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7772763127D4D50D0001434C /* RecordProtocol.swift */; };
+		7772763D27D4D5800001434C /* ContactDetailVCCellDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7772763927D4D57F0001434C /* ContactDetailVCCellDataModel.swift */; };
+		7772763E27D4D5800001434C /* ContactListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7772763A27D4D57F0001434C /* ContactListViewModel.swift */; };
+		7772763F27D4D5800001434C /* BoxedContactDetailVCDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7772763B27D4D57F0001434C /* BoxedContactDetailVCDataModel.swift */; };
+		7772764027D4D5800001434C /* ContactListCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7772763C27D4D5800001434C /* ContactListCellViewModel.swift */; };
+		7772764327D4D58C0001434C /* AddContactVCCellDataModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7772764127D4D58C0001434C /* AddContactVCCellDataModelProtocol.swift */; };
+		7772764427D4D58C0001434C /* TableViewCellDataModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7772764227D4D58C0001434C /* TableViewCellDataModelProtocol.swift */; };
+		7772764627D4D5920001434C /* InputDataType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7772764527D4D5920001434C /* InputDataType.swift */; };
+		7772764F27D4D5F00001434C /* TextFieldEditingEventsDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7772764A27D4D5EF0001434C /* TextFieldEditingEventsDelegate.swift */; };
+		7772765027D4D5F00001434C /* RecordDeleteProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7772764B27D4D5EF0001434C /* RecordDeleteProtocol.swift */; };
+		7772765127D4D5F00001434C /* NavItemsDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7772764C27D4D5F00001434C /* NavItemsDelegate.swift */; };
+		7772765227D4D5F00001434C /* RecordChangesDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7772764D27D4D5F00001434C /* RecordChangesDelegate.swift */; };
+		7772765327D4D5F00001434C /* ErrorDisplayProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7772764E27D4D5F00001434C /* ErrorDisplayProtocol.swift */; };
+		7772765627D4D5F80001434C /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7772765427D4D5F80001434C /* Box.swift */; };
+		7772765727D4D5F80001434C /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7772765527D4D5F80001434C /* AppColors.swift */; };
+		7772765B27D4D6290001434C /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7772765A27D4D6290001434C /* String+Extensions.swift */; };
+		7772765E27D4D62F0001434C /* RCTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7772765C27D4D62F0001434C /* RCTableViewCell.swift */; };
+		7772765F27D4D62F0001434C /* RCTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7772765D27D4D62F0001434C /* RCTableView.swift */; };
+		7772766627D4D7540001434C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7772766827D4D7540001434C /* InfoPlist.strings */; };
+		7772766927D4D7570001434C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7772766B27D4D7570001434C /* Localizable.strings */; };
+		7772767127D4D8560001434C /* AppStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7772766F27D4D8560001434C /* AppStrings.swift */; };
+		7772767227D4D8560001434C /* LocalisedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7772767027D4D8560001434C /* LocalisedString.swift */; };
+		7772767927D4DB020001434C /* ManagedObjectProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7772767727D4DB020001434C /* ManagedObjectProtocol.swift */; };
+		7772767A27D4DB020001434C /* PersistentStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7772767827D4DB020001434C /* PersistentStorage.swift */; };
+		7772768127D4DB390001434C /* CDContact+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7772767E27D4DB390001434C /* CDContact+Extensions.swift */; };
+		7772768227D4DB390001434C /* CDContact+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7772767F27D4DB390001434C /* CDContact+CoreDataClass.swift */; };
+		7772768327D4DB390001434C /* CDContact+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7772768027D4DB390001434C /* CDContact+CoreDataProperties.swift */; };
+		7772768727D4DB470001434C /* CDContactGroup+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7772768427D4DB470001434C /* CDContactGroup+CoreDataProperties.swift */; };
+		7772768827D4DB470001434C /* CDContactGroup+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7772768527D4DB470001434C /* CDContactGroup+Extensions.swift */; };
+		7772768927D4DB470001434C /* CDContactGroup+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7772768627D4DB470001434C /* CDContactGroup+CoreDataClass.swift */; };
+		7772768C27D4DCA70001434C /* RupeshContactsApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7772768A27D4DCA70001434C /* RupeshContactsApp.xcdatamodeld */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		777275ED27D4D1FC0001434C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 777275CB27D4D1F90001434C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 777275D227D4D1F90001434C;
+			remoteInfo = RupeshContactsApp;
+		};
+		777275F727D4D1FC0001434C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 777275CB27D4D1F90001434C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 777275D227D4D1F90001434C;
+			remoteInfo = RupeshContactsApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		777275D327D4D1F90001434C /* RupeshContactsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RupeshContactsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		777275D627D4D1F90001434C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		777275D827D4D1F90001434C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		777275E227D4D1FB0001434C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		777275E527D4D1FB0001434C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		777275E727D4D1FB0001434C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		777275EC27D4D1FC0001434C /* RupeshContactsAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RupeshContactsAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		777275F027D4D1FC0001434C /* RupeshContactsAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RupeshContactsAppTests.swift; sourceTree = "<group>"; };
+		777275F627D4D1FC0001434C /* RupeshContactsAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RupeshContactsAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		777275FA27D4D1FC0001434C /* RupeshContactsAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RupeshContactsAppUITests.swift; sourceTree = "<group>"; };
+		777275FC27D4D1FC0001434C /* RupeshContactsAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RupeshContactsAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		7772760F27D4D31C0001434C /* BaseRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseRepository.swift; sourceTree = "<group>"; };
+		7772761027D4D31C0001434C /* ContactRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactRepository.swift; sourceTree = "<group>"; };
+		7772761427D4D35C0001434C /* ContactManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactManager.swift; sourceTree = "<group>"; };
+		7772761527D4D35C0001434C /* BaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseManager.swift; sourceTree = "<group>"; };
+		7772761927D4D3960001434C /* MainTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabViewController.swift; sourceTree = "<group>"; };
+		7772762027D4D3F00001434C /* ContactListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactListTableViewCell.swift; sourceTree = "<group>"; };
+		7772762127D4D3F00001434C /* ContactListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactListController.swift; sourceTree = "<group>"; };
+		7772762527D4D49C0001434C /* ContactDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactDetailVC.swift; sourceTree = "<group>"; };
+		7772762627D4D49C0001434C /* ContactDetailVCCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactDetailVCCell.swift; sourceTree = "<group>"; };
+		7772762A27D4D4C70001434C /* ContactGroupController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactGroupController.swift; sourceTree = "<group>"; };
+		7772762D27D4D4EC0001434C /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		7772763027D4D50D0001434C /* ContactProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactProtocol.swift; sourceTree = "<group>"; };
+		7772763127D4D50D0001434C /* RecordProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordProtocol.swift; sourceTree = "<group>"; };
+		7772763927D4D57F0001434C /* ContactDetailVCCellDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactDetailVCCellDataModel.swift; sourceTree = "<group>"; };
+		7772763A27D4D57F0001434C /* ContactListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactListViewModel.swift; sourceTree = "<group>"; };
+		7772763B27D4D57F0001434C /* BoxedContactDetailVCDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoxedContactDetailVCDataModel.swift; sourceTree = "<group>"; };
+		7772763C27D4D5800001434C /* ContactListCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactListCellViewModel.swift; sourceTree = "<group>"; };
+		7772764127D4D58C0001434C /* AddContactVCCellDataModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddContactVCCellDataModelProtocol.swift; sourceTree = "<group>"; };
+		7772764227D4D58C0001434C /* TableViewCellDataModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCellDataModelProtocol.swift; sourceTree = "<group>"; };
+		7772764527D4D5920001434C /* InputDataType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputDataType.swift; sourceTree = "<group>"; };
+		7772764A27D4D5EF0001434C /* TextFieldEditingEventsDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldEditingEventsDelegate.swift; sourceTree = "<group>"; };
+		7772764B27D4D5EF0001434C /* RecordDeleteProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordDeleteProtocol.swift; sourceTree = "<group>"; };
+		7772764C27D4D5F00001434C /* NavItemsDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavItemsDelegate.swift; sourceTree = "<group>"; };
+		7772764D27D4D5F00001434C /* RecordChangesDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordChangesDelegate.swift; sourceTree = "<group>"; };
+		7772764E27D4D5F00001434C /* ErrorDisplayProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorDisplayProtocol.swift; sourceTree = "<group>"; };
+		7772765427D4D5F80001434C /* Box.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
+		7772765527D4D5F80001434C /* AppColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
+		7772765A27D4D6290001434C /* String+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		7772765C27D4D62F0001434C /* RCTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RCTableViewCell.swift; sourceTree = "<group>"; };
+		7772765D27D4D62F0001434C /* RCTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RCTableView.swift; sourceTree = "<group>"; };
+		7772766727D4D7540001434C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7772766A27D4D7570001434C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		7772766C27D4D76C0001434C /* te-IN */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "te-IN"; path = "te-IN.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		7772766D27D4D76C0001434C /* te-IN */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "te-IN"; path = "te-IN.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		7772766E27D4D76C0001434C /* te-IN */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "te-IN"; path = "te-IN.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		7772766F27D4D8560001434C /* AppStrings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppStrings.swift; sourceTree = "<group>"; };
+		7772767027D4D8560001434C /* LocalisedString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalisedString.swift; sourceTree = "<group>"; };
+		7772767727D4DB020001434C /* ManagedObjectProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagedObjectProtocol.swift; sourceTree = "<group>"; };
+		7772767827D4DB020001434C /* PersistentStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistentStorage.swift; sourceTree = "<group>"; };
+		7772767E27D4DB390001434C /* CDContact+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CDContact+Extensions.swift"; sourceTree = "<group>"; };
+		7772767F27D4DB390001434C /* CDContact+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CDContact+CoreDataClass.swift"; sourceTree = "<group>"; };
+		7772768027D4DB390001434C /* CDContact+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CDContact+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		7772768427D4DB470001434C /* CDContactGroup+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CDContactGroup+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		7772768527D4DB470001434C /* CDContactGroup+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CDContactGroup+Extensions.swift"; sourceTree = "<group>"; };
+		7772768627D4DB470001434C /* CDContactGroup+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CDContactGroup+CoreDataClass.swift"; sourceTree = "<group>"; };
+		7772768B27D4DCA70001434C /* RupeshContactsApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RupeshContactsApp.xcdatamodel; sourceTree = "<group>"; };
+		7772768D27D4DD7D0001434C /* RupeshContactsApp 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "RupeshContactsApp 2.xcdatamodel"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		777275D027D4D1F90001434C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		777275E927D4D1FC0001434C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		777275F327D4D1FC0001434C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		777275CA27D4D1F90001434C = {
+			isa = PBXGroup;
+			children = (
+				777275D527D4D1F90001434C /* RupeshContactsApp */,
+				777275EF27D4D1FC0001434C /* RupeshContactsAppTests */,
+				777275F927D4D1FC0001434C /* RupeshContactsAppUITests */,
+				777275D427D4D1F90001434C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		777275D427D4D1F90001434C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				777275D327D4D1F90001434C /* RupeshContactsApp.app */,
+				777275EC27D4D1FC0001434C /* RupeshContactsAppTests.xctest */,
+				777275F627D4D1FC0001434C /* RupeshContactsAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		777275D527D4D1F90001434C /* RupeshContactsApp */ = {
+			isa = PBXGroup;
+			children = (
+				7772760927D4D2980001434C /* App Delegate */,
+				7772760A27D4D2CA0001434C /* Repository */,
+				7772761827D4D37D0001434C /* View Controllers */,
+				7772762C27D4D4DA0001434C /* Models */,
+				7772763427D4D5200001434C /* View Model */,
+				7772761327D4D3410001434C /* Manager */,
+				7772767327D4D8DF0001434C /* CoreData */,
+				7772764727D4D5AC0001434C /* Common */,
+				7772766327D4D70B0001434C /* Strings */,
+				777275E227D4D1FB0001434C /* Assets.xcassets */,
+				777275E427D4D1FB0001434C /* LaunchScreen.storyboard */,
+				777275E727D4D1FB0001434C /* Info.plist */,
+			);
+			path = RupeshContactsApp;
+			sourceTree = "<group>";
+		};
+		777275EF27D4D1FC0001434C /* RupeshContactsAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				777275F027D4D1FC0001434C /* RupeshContactsAppTests.swift */,
+			);
+			path = RupeshContactsAppTests;
+			sourceTree = "<group>";
+		};
+		777275F927D4D1FC0001434C /* RupeshContactsAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				777275FA27D4D1FC0001434C /* RupeshContactsAppUITests.swift */,
+				777275FC27D4D1FC0001434C /* RupeshContactsAppUITestsLaunchTests.swift */,
+			);
+			path = RupeshContactsAppUITests;
+			sourceTree = "<group>";
+		};
+		7772760927D4D2980001434C /* App Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				777275D627D4D1F90001434C /* AppDelegate.swift */,
+				777275D827D4D1F90001434C /* SceneDelegate.swift */,
+			);
+			path = "App Delegate";
+			sourceTree = "<group>";
+		};
+		7772760A27D4D2CA0001434C /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				7772760F27D4D31C0001434C /* BaseRepository.swift */,
+				7772761027D4D31C0001434C /* ContactRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		7772761327D4D3410001434C /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				7772761527D4D35C0001434C /* BaseManager.swift */,
+				7772761427D4D35C0001434C /* ContactManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		7772761827D4D37D0001434C /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7772761927D4D3960001434C /* MainTabViewController.swift */,
+				7772761B27D4D3AF0001434C /* ContactList */,
+				7772762427D4D4720001434C /* AddContact */,
+				7772762927D4D4A10001434C /* ContactGroupList */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		7772761B27D4D3AF0001434C /* ContactList */ = {
+			isa = PBXGroup;
+			children = (
+				7772762127D4D3F00001434C /* ContactListController.swift */,
+				7772762027D4D3F00001434C /* ContactListTableViewCell.swift */,
+			);
+			path = ContactList;
+			sourceTree = "<group>";
+		};
+		7772762427D4D4720001434C /* AddContact */ = {
+			isa = PBXGroup;
+			children = (
+				7772762527D4D49C0001434C /* ContactDetailVC.swift */,
+				7772762627D4D49C0001434C /* ContactDetailVCCell.swift */,
+			);
+			path = AddContact;
+			sourceTree = "<group>";
+		};
+		7772762927D4D4A10001434C /* ContactGroupList */ = {
+			isa = PBXGroup;
+			children = (
+				7772762A27D4D4C70001434C /* ContactGroupController.swift */,
+			);
+			path = ContactGroupList;
+			sourceTree = "<group>";
+		};
+		7772762C27D4D4DA0001434C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7772762F27D4D4FC0001434C /* Abstraction Protocols */,
+				7772762D27D4D4EC0001434C /* Contact.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		7772762F27D4D4FC0001434C /* Abstraction Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				7772763027D4D50D0001434C /* ContactProtocol.swift */,
+				7772763127D4D50D0001434C /* RecordProtocol.swift */,
+			);
+			path = "Abstraction Protocols";
+			sourceTree = "<group>";
+		};
+		7772763427D4D5200001434C /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				7772763827D4D53B0001434C /* Abstraction Protocols */,
+				7772763527D4D52D0001434C /* Enum */,
+				7772763B27D4D57F0001434C /* BoxedContactDetailVCDataModel.swift */,
+				7772763927D4D57F0001434C /* ContactDetailVCCellDataModel.swift */,
+				7772763C27D4D5800001434C /* ContactListCellViewModel.swift */,
+				7772763A27D4D57F0001434C /* ContactListViewModel.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		7772763527D4D52D0001434C /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				7772764527D4D5920001434C /* InputDataType.swift */,
+			);
+			path = Enum;
+			sourceTree = "<group>";
+		};
+		7772763827D4D53B0001434C /* Abstraction Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				7772764127D4D58C0001434C /* AddContactVCCellDataModelProtocol.swift */,
+				7772764227D4D58C0001434C /* TableViewCellDataModelProtocol.swift */,
+			);
+			path = "Abstraction Protocols";
+			sourceTree = "<group>";
+		};
+		7772764727D4D5AC0001434C /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				7772765527D4D5F80001434C /* AppColors.swift */,
+				7772765427D4D5F80001434C /* Box.swift */,
+				7772764827D4D5BD0001434C /* Protocols */,
+				7772764927D4D5CA0001434C /* Base Classes */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		7772764827D4D5BD0001434C /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				7772764E27D4D5F00001434C /* ErrorDisplayProtocol.swift */,
+				7772764C27D4D5F00001434C /* NavItemsDelegate.swift */,
+				7772764D27D4D5F00001434C /* RecordChangesDelegate.swift */,
+				7772764B27D4D5EF0001434C /* RecordDeleteProtocol.swift */,
+				7772764A27D4D5EF0001434C /* TextFieldEditingEventsDelegate.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		7772764927D4D5CA0001434C /* Base Classes */ = {
+			isa = PBXGroup;
+			children = (
+				7772765927D4D60F0001434C /* Extensions */,
+				7772765827D4D6090001434C /* Views */,
+			);
+			path = "Base Classes";
+			sourceTree = "<group>";
+		};
+		7772765827D4D6090001434C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7772765D27D4D62F0001434C /* RCTableView.swift */,
+				7772765C27D4D62F0001434C /* RCTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7772765927D4D60F0001434C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7772765A27D4D6290001434C /* String+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		7772766327D4D70B0001434C /* Strings */ = {
+			isa = PBXGroup;
+			children = (
+				7772766B27D4D7570001434C /* Localizable.strings */,
+				7772766827D4D7540001434C /* InfoPlist.strings */,
+				7772766F27D4D8560001434C /* AppStrings.swift */,
+				7772767027D4D8560001434C /* LocalisedString.swift */,
+			);
+			path = Strings;
+			sourceTree = "<group>";
+		};
+		7772767327D4D8DF0001434C /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				7772767B27D4DB0E0001434C /* NSManagedObject */,
+				7772767627D4DAF00001434C /* Support Files */,
+				7772767527D4DA6A0001434C /* CoreDataModel */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		7772767527D4DA6A0001434C /* CoreDataModel */ = {
+			isa = PBXGroup;
+			children = (
+				7772768A27D4DCA70001434C /* RupeshContactsApp.xcdatamodeld */,
+			);
+			path = CoreDataModel;
+			sourceTree = "<group>";
+		};
+		7772767627D4DAF00001434C /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				7772767727D4DB020001434C /* ManagedObjectProtocol.swift */,
+				7772767827D4DB020001434C /* PersistentStorage.swift */,
+			);
+			path = "Support Files";
+			sourceTree = "<group>";
+		};
+		7772767B27D4DB0E0001434C /* NSManagedObject */ = {
+			isa = PBXGroup;
+			children = (
+				7772767D27D4DB220001434C /* CDContact */,
+				7772767C27D4DB1A0001434C /* CDContactGroup */,
+			);
+			path = NSManagedObject;
+			sourceTree = "<group>";
+		};
+		7772767C27D4DB1A0001434C /* CDContactGroup */ = {
+			isa = PBXGroup;
+			children = (
+				7772768627D4DB470001434C /* CDContactGroup+CoreDataClass.swift */,
+				7772768427D4DB470001434C /* CDContactGroup+CoreDataProperties.swift */,
+				7772768527D4DB470001434C /* CDContactGroup+Extensions.swift */,
+			);
+			path = CDContactGroup;
+			sourceTree = "<group>";
+		};
+		7772767D27D4DB220001434C /* CDContact */ = {
+			isa = PBXGroup;
+			children = (
+				7772767F27D4DB390001434C /* CDContact+CoreDataClass.swift */,
+				7772768027D4DB390001434C /* CDContact+CoreDataProperties.swift */,
+				7772767E27D4DB390001434C /* CDContact+Extensions.swift */,
+			);
+			path = CDContact;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		777275D227D4D1F90001434C /* RupeshContactsApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7772760027D4D1FC0001434C /* Build configuration list for PBXNativeTarget "RupeshContactsApp" */;
+			buildPhases = (
+				777275CF27D4D1F90001434C /* Sources */,
+				777275D027D4D1F90001434C /* Frameworks */,
+				777275D127D4D1F90001434C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RupeshContactsApp;
+			productName = RupeshContactsApp;
+			productReference = 777275D327D4D1F90001434C /* RupeshContactsApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		777275EB27D4D1FC0001434C /* RupeshContactsAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7772760327D4D1FC0001434C /* Build configuration list for PBXNativeTarget "RupeshContactsAppTests" */;
+			buildPhases = (
+				777275E827D4D1FC0001434C /* Sources */,
+				777275E927D4D1FC0001434C /* Frameworks */,
+				777275EA27D4D1FC0001434C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				777275EE27D4D1FC0001434C /* PBXTargetDependency */,
+			);
+			name = RupeshContactsAppTests;
+			productName = RupeshContactsAppTests;
+			productReference = 777275EC27D4D1FC0001434C /* RupeshContactsAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		777275F527D4D1FC0001434C /* RupeshContactsAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7772760627D4D1FC0001434C /* Build configuration list for PBXNativeTarget "RupeshContactsAppUITests" */;
+			buildPhases = (
+				777275F227D4D1FC0001434C /* Sources */,
+				777275F327D4D1FC0001434C /* Frameworks */,
+				777275F427D4D1FC0001434C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				777275F827D4D1FC0001434C /* PBXTargetDependency */,
+			);
+			name = RupeshContactsAppUITests;
+			productName = RupeshContactsAppUITests;
+			productReference = 777275F627D4D1FC0001434C /* RupeshContactsAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		777275CB27D4D1F90001434C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					777275D227D4D1F90001434C = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					777275EB27D4D1FC0001434C = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = 777275D227D4D1F90001434C;
+					};
+					777275F527D4D1FC0001434C = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = 777275D227D4D1F90001434C;
+					};
+				};
+			};
+			buildConfigurationList = 777275CE27D4D1F90001434C /* Build configuration list for PBXProject "RupeshContactsApp" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				"te-IN",
+			);
+			mainGroup = 777275CA27D4D1F90001434C;
+			productRefGroup = 777275D427D4D1F90001434C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				777275D227D4D1F90001434C /* RupeshContactsApp */,
+				777275EB27D4D1FC0001434C /* RupeshContactsAppTests */,
+				777275F527D4D1FC0001434C /* RupeshContactsAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		777275D127D4D1F90001434C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7772766627D4D7540001434C /* InfoPlist.strings in Resources */,
+				777275E627D4D1FB0001434C /* LaunchScreen.storyboard in Resources */,
+				777275E327D4D1FB0001434C /* Assets.xcassets in Resources */,
+				7772766927D4D7570001434C /* Localizable.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		777275EA27D4D1FC0001434C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		777275F427D4D1FC0001434C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		777275CF27D4D1F90001434C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7772763327D4D50D0001434C /* RecordProtocol.swift in Sources */,
+				7772768127D4DB390001434C /* CDContact+Extensions.swift in Sources */,
+				7772765127D4D5F00001434C /* NavItemsDelegate.swift in Sources */,
+				7772762827D4D49C0001434C /* ContactDetailVCCell.swift in Sources */,
+				7772767227D4D8560001434C /* LocalisedString.swift in Sources */,
+				7772765727D4D5F80001434C /* AppColors.swift in Sources */,
+				7772765327D4D5F00001434C /* ErrorDisplayProtocol.swift in Sources */,
+				7772768327D4DB390001434C /* CDContact+CoreDataProperties.swift in Sources */,
+				7772768227D4DB390001434C /* CDContact+CoreDataClass.swift in Sources */,
+				7772763F27D4D5800001434C /* BoxedContactDetailVCDataModel.swift in Sources */,
+				7772761627D4D35C0001434C /* ContactManager.swift in Sources */,
+				7772767A27D4DB020001434C /* PersistentStorage.swift in Sources */,
+				7772764F27D4D5F00001434C /* TextFieldEditingEventsDelegate.swift in Sources */,
+				7772765E27D4D62F0001434C /* RCTableViewCell.swift in Sources */,
+				7772762227D4D3F00001434C /* ContactListTableViewCell.swift in Sources */,
+				7772767127D4D8560001434C /* AppStrings.swift in Sources */,
+				7772764027D4D5800001434C /* ContactListCellViewModel.swift in Sources */,
+				7772762B27D4D4C70001434C /* ContactGroupController.swift in Sources */,
+				7772763227D4D50D0001434C /* ContactProtocol.swift in Sources */,
+				7772765627D4D5F80001434C /* Box.swift in Sources */,
+				7772768927D4DB470001434C /* CDContactGroup+CoreDataClass.swift in Sources */,
+				7772767927D4DB020001434C /* ManagedObjectProtocol.swift in Sources */,
+				7772762727D4D49C0001434C /* ContactDetailVC.swift in Sources */,
+				7772768727D4DB470001434C /* CDContactGroup+CoreDataProperties.swift in Sources */,
+				7772765F27D4D62F0001434C /* RCTableView.swift in Sources */,
+				7772761A27D4D3960001434C /* MainTabViewController.swift in Sources */,
+				7772764327D4D58C0001434C /* AddContactVCCellDataModelProtocol.swift in Sources */,
+				7772764627D4D5920001434C /* InputDataType.swift in Sources */,
+				7772762E27D4D4ED0001434C /* Contact.swift in Sources */,
+				7772763E27D4D5800001434C /* ContactListViewModel.swift in Sources */,
+				7772763D27D4D5800001434C /* ContactDetailVCCellDataModel.swift in Sources */,
+				7772761227D4D31C0001434C /* ContactRepository.swift in Sources */,
+				7772768C27D4DCA70001434C /* RupeshContactsApp.xcdatamodeld in Sources */,
+				7772762327D4D3F00001434C /* ContactListController.swift in Sources */,
+				7772761727D4D35C0001434C /* BaseManager.swift in Sources */,
+				7772765027D4D5F00001434C /* RecordDeleteProtocol.swift in Sources */,
+				7772765227D4D5F00001434C /* RecordChangesDelegate.swift in Sources */,
+				777275D727D4D1F90001434C /* AppDelegate.swift in Sources */,
+				7772768827D4DB470001434C /* CDContactGroup+Extensions.swift in Sources */,
+				7772764427D4D58C0001434C /* TableViewCellDataModelProtocol.swift in Sources */,
+				7772765B27D4D6290001434C /* String+Extensions.swift in Sources */,
+				7772761127D4D31C0001434C /* BaseRepository.swift in Sources */,
+				777275D927D4D1F90001434C /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		777275E827D4D1FC0001434C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				777275F127D4D1FC0001434C /* RupeshContactsAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		777275F227D4D1FC0001434C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				777275FD27D4D1FC0001434C /* RupeshContactsAppUITestsLaunchTests.swift in Sources */,
+				777275FB27D4D1FC0001434C /* RupeshContactsAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		777275EE27D4D1FC0001434C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 777275D227D4D1F90001434C /* RupeshContactsApp */;
+			targetProxy = 777275ED27D4D1FC0001434C /* PBXContainerItemProxy */;
+		};
+		777275F827D4D1FC0001434C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 777275D227D4D1F90001434C /* RupeshContactsApp */;
+			targetProxy = 777275F727D4D1FC0001434C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		777275E427D4D1FB0001434C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				777275E527D4D1FB0001434C /* Base */,
+				7772766C27D4D76C0001434C /* te-IN */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		7772766827D4D7540001434C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7772766727D4D7540001434C /* en */,
+				7772766E27D4D76C0001434C /* te-IN */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		7772766B27D4D7570001434C /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7772766A27D4D7570001434C /* en */,
+				7772766D27D4D76C0001434C /* te-IN */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		777275FE27D4D1FC0001434C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		777275FF27D4D1FC0001434C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7772760127D4D1FC0001434C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 0200;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RupeshContactsApp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rupesh.edu.RupeshContactsApp.RupeshContactsApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7772760227D4D1FC0001434C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 0200;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RupeshContactsApp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rupesh.edu.RupeshContactsApp.RupeshContactsApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		7772760427D4D1FC0001434C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rupesh.edu.RupeshContactsApp.RupeshContactsAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RupeshContactsApp.app/RupeshContactsApp";
+			};
+			name = Debug;
+		};
+		7772760527D4D1FC0001434C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rupesh.edu.RupeshContactsApp.RupeshContactsAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RupeshContactsApp.app/RupeshContactsApp";
+			};
+			name = Release;
+		};
+		7772760727D4D1FC0001434C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rupesh.edu.RupeshContactsApp.RupeshContactsAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RupeshContactsApp;
+			};
+			name = Debug;
+		};
+		7772760827D4D1FC0001434C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rupesh.edu.RupeshContactsApp.RupeshContactsAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RupeshContactsApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		777275CE27D4D1F90001434C /* Build configuration list for PBXProject "RupeshContactsApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				777275FE27D4D1FC0001434C /* Debug */,
+				777275FF27D4D1FC0001434C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7772760027D4D1FC0001434C /* Build configuration list for PBXNativeTarget "RupeshContactsApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7772760127D4D1FC0001434C /* Debug */,
+				7772760227D4D1FC0001434C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7772760327D4D1FC0001434C /* Build configuration list for PBXNativeTarget "RupeshContactsAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7772760427D4D1FC0001434C /* Debug */,
+				7772760527D4D1FC0001434C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7772760627D4D1FC0001434C /* Build configuration list for PBXNativeTarget "RupeshContactsAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7772760727D4D1FC0001434C /* Debug */,
+				7772760827D4D1FC0001434C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		7772768A27D4DCA70001434C /* RupeshContactsApp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				7772768D27D4DD7D0001434C /* RupeshContactsApp 2.xcdatamodel */,
+				7772768B27D4DCA70001434C /* RupeshContactsApp.xcdatamodel */,
+			);
+			currentVersion = 7772768D27D4DD7D0001434C /* RupeshContactsApp 2.xcdatamodel */;
+			path = RupeshContactsApp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 777275CB27D4D1F90001434C /* Project object */;
+}
