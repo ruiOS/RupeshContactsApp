@@ -60,7 +60,7 @@ class RupeshContactsAppTests: XCTestCase {
         let contact = Contact(contactNumber: viewModel.dataFieldModel.value.contactNumber, contactPic: viewModel.dataFieldModel.value.contactPic, firstName: viewModel.dataFieldModel.value.firstName, lastName: viewModel.dataFieldModel.value.lastName, middleName: viewModel.dataFieldModel.value.middleName, id: UUID())
         let manager = ContactManager()
 
-        manager.create(contact: contact)
+        manager.create(record: contact)
     }
 
     func testContact(withContact contact: Contact){
@@ -73,7 +73,7 @@ class RupeshContactsAppTests: XCTestCase {
     func removeContactFromDB(contact: Contact){
         let manager = ContactManager()
 
-        let _ = manager.deleteContact(usingID: contact.id)
+        let _ = manager.deleteRecord(usingID: contact.id)
     }
 
 }
